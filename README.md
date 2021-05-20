@@ -85,7 +85,7 @@ The goal for the website is to provide fans of the band Dead by April with some 
 
 #### Functional specifications
 
-The website should have navigation to switch between the different sections of the hompage and to nagivate to other pages, such as the album or the login page. There should be buttons that link to external websites, such as concert ticket sellers. Content on the website should support different screen sizes. Wherever appropriate and or possible, visible indicators should be shown to users when they can perform an action on the website (like clicking a link or a button).
+The website should have navigation to switch between the different sections of the homepage and to navigate to other pages, such as the album or the login page. There should be buttons that link to external websites, such as concert ticket sellers. Content on the website should support different screen sizes. Wherever appropriate and or possible, visible indicators should be shown to users when they can perform an action on the website (like clicking a link or a button).
 
 #### Content requirements
 
@@ -95,11 +95,11 @@ The website should display information on current band members. The website shou
 
 #### Information architecture
 
-placeholder text
+The website has a landing page with a button to the actual homepage. On the homepage there are 4 different sections to navigate to: welcome, band, blog, and tour. On the homepage visitors can also navigate to an album page and a login page.
 
 #### Interaction design
 
-placeholder text
+Depending on their device, users could see through visible indicators like changes of colour and/or changing mouse pointers whether something is clickable. Icons such as an arrow pointing down indicate to users that an element can be expanded. Users with touchscreens can swipe up and down to scroll through the page, and they can (double)tap to select buttons and navigation elements. No audio will be used in this website.
 
 ### Skeleton
 
