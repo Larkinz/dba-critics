@@ -67,11 +67,19 @@ This website was made as my third milestone project for the Code Institute cours
 
 #### Goal
 
-The goal for the website is...
+The goal for the website is to provide fans of the band Dead by April with some general information, as well as a place to rate and discuss their album discography.
 
 #### User stories
 
-placeholder text
+- As a **visitor**, I would like **to see an overview of the upcoming tour**, so that **I know where and when the next concerts take place**.
+
+- As a **visitor**, I would like **to rate albums**, so that **I can compare the ratings with other fans**.
+
+- As a **visitor**, I would like **to discuss albums**, so that **I can share my thoughts with other fans**.
+
+- As a **site owner**, I would like our website **to have an intuitive navigation system**, so that **visitors can easily find what they are looking for**.
+
+- As a **site owner**, I would like **to prevent unique visitors from voting twice**, so that **album ratings can't easily be cheated**.
 
 ### Scope
 
