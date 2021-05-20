@@ -85,11 +85,11 @@ The goal for the website is to provide fans of the band Dead by April with some 
 
 #### Functional specifications
 
-placeholder text
+The website should have navigation to switch between the different sections of the hompage and to nagivate to other pages, such as the album or the login page. There should be buttons that link to external websites, such as concert ticket sellers. Content on the website should support different screen sizes. Wherever appropriate and or possible, visible indicators should be shown to users when they can perform an action on the website (like clicking a link or a button).
 
 #### Content requirements
 
-placeholder text
+The website should display information on current band members. The website should provide links to the official Dead by April blog. The website should display a tour schedule and provide links to purchase concert tickets. The website should display album information. The website should provide the option to rate albums. The website should provide the option to discuss or comment on albums. The website should provide links to the official Dead by April social media channels.
 
 ### Structure
 
