@@ -115,15 +115,17 @@ To see separate PNG image files of the wireframes check the wireframes folder.
 
 #### Colours
 
-placeholder text
+The first thing that came to my mind was to use a dark type of blue for this project, I think that would go well with some kind of off-white colour. I also plan to experiment with some linear gradients, so I would also need a lighter type of blue to go with the dark blue. Some kind of colour that pops could be very useful too, my initial thought is to go with some kind of orange or yellow, but I might decide to change this later.
+
+![Colour palette](wireframes/colour-palette.png)
 
 #### Typography
 
-placeholder text
+From my experience with previous projects I like the font-style 'Montserrat' from the Google Fonts library, it looks clean and professional, and it's a very readable font-style. I don't think I will be needing more than one font-style, but if I do, I will make sure to add that here later.
 
 #### Uniformity
 
-placeholder text
+To keep the website looking uniform I will do my best to make sure that all related contents throughout the website are consistent in font size and styling. The positioning of elements and contents should be consistent in height, padding and spacing. I'm also using either grid, flexbox or both to present the content in a logical order, either through custom CSS or through the Materialize framework.
 
 **_[Back to top](#contents)_**
 
