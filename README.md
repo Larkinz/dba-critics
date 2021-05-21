@@ -137,11 +137,62 @@ To keep the website looking uniform I will do my best to make sure that all rela
 
 #### General features
 
-placeholder text
+**Top navigation bar**:
+
+- Will always be visible at the top of every page, except for the landing page.
+- Has a clickable logo on either the left side or in the center that returns the user to the homepage.
+- On the right side it has internal links to each separate section of the homepage, as well as internal links to the albums page and login page. When a user is logged in there will also be a logout option displayed.
+- It will be fully responsive in the sense that it will shrink on smaller screen sizes and eventually collapse into a hamburger menu icon.
+
+**Mobile side navigation**:
+
+- Will visible at the left of every page after clicking the hamburger menu icon, except for the landing page.
+- Has internal links to each separate section of the homepage, as well as internal links to the albums page and login page. When a user is logged in there will also be a logout option displayed.
+
+**Footer**:
+
+- Will always be visible at the bottom of every page, except for the landing page.
+- Has social media icons with external links to the official Dead by April social media channels.
 
 #### Page specific features
 
-placeholder text
+**Landing page**:
+
+- Displays a welcome message in the center bottom and provides a button with an internal link to the homepage.
+- Has a full screen video playing in the background on loop without sound.
+
+**Homepage**:
+
+- Has 4 separate sections: home, band, blog, and tour.
+- Each section is separated with a (parallax) image.
+- The home section states the purpose of the website and provides the visitor with some general information about the band Dead by April.
+- The band section shows an image of each current band member and some information about their role in the band.
+- The blog section shows a short version of some of the latest official Dead by April blogs and provides an external link to them.
+- The tour section shows an overview of the Dead by April tour schedule, including dates, venue, location, and external links to ticket sellers.
+
+**Albums page**:
+
+- Has an expandable collapsible element for each Dead by April studio album.
+- The first expandable header shows the album title and to the right is an arrow down icon to indicate to the visitor that it can be expanded.
+- The body of the first expandable header contains an image of the album cover, as well as some general information of the album.
+- The second expandable header says 'tracklist' and to the right is an arrow down icon to indicate to the visitor that it can be expanded.
+- The body of the second expandable header contains the full tracklist of the album, including bonus and/or exclusive songs.
+- The third expandable header says 'comments' and to the right is an arrow down icon to indicate to the visitor that it can be expanded.
+- The body of the third expandable header contains a comment section where logged in visitors can share their thoughts about the album.
+- At the bottom of each set of album collapsibles some kind of rating system will be displayed.
+
+**Login page**:
+
+- Has a textbox where the visitor can enter a username.
+- Has a textbox where the visitor can enter a password.
+- Has a button that says 'login'.
+- Has an internal link to the register page for visitors who have not yet registered an account.
+
+**Register page**:
+
+- Has a textbox where the visitor can enter a username.
+- Has a textbox where the visitor can enter a password.
+- Has a button that says 'register'.
 
 ### Future features
 
