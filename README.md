@@ -103,11 +103,13 @@ Depending on their device, users could see through visible indicators like chang
 
 ### Skeleton
 
-placeholder text
+On large screen sizes the logo will be displayed on the left in the navbar and all the navigation links are on the right. On medium to small screen sizes the logo will be displayed in the center of the navbar and on the right will be a hamburger menu icon. On both the homepage and the albums page a footer will be displayed at the bottom of the page on all screen sizes. The footer will contain social media icons with links. In the home section of the homepage there will be some paragraphs with titles displayed below each other on all screen sizes. There will be an image separating each section of the homepage on all screen sizes. In the band section of the homepage there will be an image displayed and some information next to it for each band member on large and medium screen sizes, on small screen sizes this information will be displayed below the image. In the blog section of the homepage there will be two blogs next to each other on large screen sizes, on medium and small screen sizes the blogs will be below each other. In the tour section of the homepage there will be event information containers displayed below each other on all screen sizes. On the albums page an expandable collapsible will be displayed for each album in the center of the screen on all screen sizes. The first collapsible contains the album title and the body contains an image of the album cover and some general information. The second collapsible contains a tracklist. The third collapsible contains a comment section unique to each album. At the bottom of each set of album collapsibles some kind of rating system will be displayed.
 
 #### Wireframes
 
-placeholder text
+To see all the wireframes in a single PDF [click here](wireframes/dba-critics-wireframes-pdf.pdf).
+
+To see separate PNG image files of the wireframes check the wireframes folder.
 
 ### Surface
 
