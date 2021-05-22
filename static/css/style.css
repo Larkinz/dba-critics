@@ -1,0 +1,110 @@
+/* ----- import fonts ----- */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap");
+
+/* ------ set clean elements styling by removing default margins and paddings ----- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------ set easy unit conversion for REM font size (1 REM = 10px) that still allows font scaling in browser ----- */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  background-color: #fffef7;
+}
+
+/* --------------- welcome / landing page --------------- */
+/* --- credits #?? (see README.md credits section) --- */
+
+.showcase {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fffef7;
+  padding: 0 20px;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #09097a url("/static/img/warrior-clip-snapshot.png") no-repeat
+    center center/cover;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-container:after {
+  content: "";
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(99, 99, 99, 0.5);
+  position: absolute;
+}
+
+.landing-page-content {
+  z-index: 2;
+  align-self: flex-end;
+  margin-bottom: 60px;
+}
+
+.landing-page-title {
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  text-shadow: 3px 2px #000000;
+}
+
+.landing-page-subtitle {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  text-shadow: 1px 2px #000000;
+}
+
+.enter-site-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 24px;
+  background: #fa7e0a;
+  color: #fffef7;
+  border-radius: 5px;
+  border: solid #fffef7 2px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.enter-site-button:hover {
+  transform: scale(1.05);
+  background: #fa7e0a99;
+}
