@@ -134,3 +134,34 @@ nav ul li:hover {
 .waves-effect.waves-custom .waves-ripple {
   background-color: #fa7e0a;
 }
+
+/* --------------- mobile sidenav --------------- */
+
+.sidenav {
+  background-color: #fffef7;
+}
+
+.sidenav-logo-container {
+  height: 100px;
+  background: linear-gradient(240deg, #2b2bc4 0%, #09097a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav-logo {
+  height: auto;
+  width: 200px;
+}
+
+.sidenav li a {
+  color: #09097a;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #09097a;
+  text-align: center;
+}
+
+.sidenav li > a:hover {
+  color: #fffef7;
+  background-color: #09097a;
+}
