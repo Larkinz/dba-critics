@@ -26,6 +26,11 @@ def welcome():
     return render_template("welcome.html")
 
 
+@app.route("/homepage")
+def homepage():
+    return render_template("homepage.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
