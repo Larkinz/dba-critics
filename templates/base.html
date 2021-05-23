@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS for Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- load font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- load custom css -->
+    <link href="/static/css/style.css" rel="stylesheet preload" as="style"/>
+    <title>DBA critics</title>
+</head>
+<body>
+
+    <!-- navbar -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="brand-logo">
+                        <img width="200px" class="responsive-img" src="/static/img/dbac-logo-transparent.png">
+                    </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Band</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tour</a></li>
+                        <li><a href="#">Albums</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- mobile sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+        <div class="sidenav-logo-container">
+            <img class="sidenav-logo" src="/static/img/dbac-logo-transparent.png">
+        </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Band</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Tour</a></li>
+        <li><a href="#">Albums</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="container center">
+            <div>Dead By April</div>
+            <div>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-instagram-square"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Compiled and minified JavaScript for Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- load custom javascript -->
+    <script src="/static/js/script.js"></script>
+
+</body>
+</html>
