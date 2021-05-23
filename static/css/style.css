@@ -108,3 +108,29 @@ body {
   transform: scale(1.05);
   background: #fa7e0a99;
 }
+
+/* --------------- navbar --------------- */
+
+nav {
+  background: linear-gradient(240deg, #2b2bc4 0%, #09097a 100%);
+}
+
+nav ul a {
+  font-size: 1.6rem;
+}
+
+nav ul li:hover {
+  background-color: #09097a;
+  transition: background-color 2s ease 0s;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 82px;
+}
+
+.waves-effect.waves-custom .waves-ripple {
+  background-color: #fa7e0a;
+}
