@@ -166,10 +166,37 @@ nav ul li:hover {
   background-color: #09097a;
 }
 
+/* --------------- home section --------------- */
+
+#home {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 20px 0px 10px 0px;
+}
+
+.welcome-container h2,
+.dba-info-container h2 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin: 12px 0px 6px 0px;
+}
+
+.welcome-container p,
+.dba-info-container p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 /* --------------- footer --------------- */
 
 footer {
-  background: rgb(9, 9, 122);
+  background: #09097a;
   color: #fffef7;
   padding: 12px 0px;
 }
