@@ -193,15 +193,73 @@ nav ul li:hover {
   font-weight: 400;
 }
 
+/* --------------- band section --------------- */
+
+#band {
+  display: flex;
+  flex-direction: column;
+}
+
+#pontus-container,
+#marcusr-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#marcusw-container,
+#christopher-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.slider,
+.artist-info-container {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .slides li,
+.artist-info-container {
+  height: 400px;
+  margin: 10px 0px;
+}
+
+.slider .slides li img {
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+  background-size: none;
+  background-position: none;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.artist-info-container h2 {
+  text-align: center;
+  font-weight: 500;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.artist-info-container h3 {
+  text-align: center;
+  font-style: italic;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
 /* --------------- parallax --------------- */
 
 .parallax-container {
   height: 30vh;
+  margin-top: 20px;
 }
 
 /* --------------- temporary section styling --------------- */
 
-#band,
 #blog,
 #tour {
   min-height: 800px;
@@ -224,4 +282,72 @@ footer i {
 
 footer i:hover {
   color: rgba(255, 254, 247, 0.6);
+}
+
+/* --------------- homepage band section media queries --------------- */
+
+@media (max-width: 1316px) {
+  .slider .slides li,
+  .artist-info-container {
+    height: 350px;
+  }
+
+  .artist-info-container h2 {
+    font-size: 3.2rem;
+  }
+
+  .artist-info-container h3 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  #pontus-container,
+  #marcusr-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #marcusw-container,
+  #christopher-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .slider {
+    flex: 0 1 auto;
+    height: 350px !important;
+  }
+
+  .artist-info-container {
+    flex: 0 1 auto;
+    height: auto;
+  }
+
+  .artist-info-container h2 {
+    margin: 10px 12px;
+  }
+
+  .artist-info-container h3 {
+    margin: 6px 24px;
+  }
+}
+
+@media (max-width: 541px) {
+  .slider {
+    height: 250px !important;
+  }
+
+  .slider .slides li {
+    height: 250px;
+  }
+  .artist-info-container h2 {
+    font-size: 2.8rem;
+    margin: 8px 10px;
+  }
+
+  .artist-info-container h3 {
+    font-size: 2rem;
+    margin: 4px 12px;
+  }
 }
