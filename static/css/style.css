@@ -251,6 +251,65 @@ nav ul li:hover {
   margin-right: 24px;
 }
 
+/* --------------- blog section --------------- */
+
+#blog {
+  display: flex;
+  flex-direction: column;
+}
+
+.double-blog-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.single-blog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 0 1 50%;
+  background-color: rgba(231, 231, 224, 0.5);
+  padding: 24px;
+  margin: 8px;
+}
+
+.single-blog-container h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.single-blog-container h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.single-blog-container p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 12px;
+}
+
+.blog-btn {
+  margin-top: 10px;
+  width: 200px;
+  color: #fffef7;
+  background-color: orange;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.blog-btn:hover {
+  background-color: #09097a;
+  transform: scale(1.05);
+}
+
+.blog-btn:focus {
+  background-color: #09097a;
+}
+
 /* --------------- parallax --------------- */
 
 .parallax-container {
@@ -260,7 +319,6 @@ nav ul li:hover {
 
 /* --------------- temporary section styling --------------- */
 
-#blog,
 #tour {
   min-height: 800px;
 }
@@ -349,5 +407,77 @@ footer i:hover {
   .artist-info-container h3 {
     font-size: 2rem;
     margin: 4px 12px;
+  }
+}
+
+/* --------------- homepage blog section media queries --------------- */
+
+@media (max-width: 1120px) {
+  .single-blog-container h2 {
+    font-size: 2.4rem;
+  }
+
+  .single-blog-container h4 {
+    font-size: 1.8rem;
+    margin-top: 8px;
+  }
+
+  .single-blog-container p {
+    font-size: 1.6rem;
+    margin-top: 10px;
+  }
+
+  .blog-btn {
+    margin-top: 10px;
+    width: 160px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .double-blog-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 415px) {
+  .single-blog-container {
+    padding: 12px;
+    margin: 8px;
+  }
+
+  .single-blog-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .single-blog-container h4 {
+    font-size: 1.7rem;
+    margin-top: 6px;
+  }
+
+  .single-blog-container p {
+    font-size: 1.4rem;
+    margin-top: 6px;
+  }
+
+  .blog-btn {
+    margin-top: 6px;
+    width: 120px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 321px) {
+  .single-blog-container h2 {
+    font-size: 2rem;
+  }
+
+  .single-blog-container h4 {
+    font-size: 1.6rem;
+  }
+
+  .single-blog-container p {
+    font-size: 1.2rem;
+    margin-top: 4px;
   }
 }
