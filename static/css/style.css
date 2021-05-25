@@ -193,6 +193,20 @@ nav ul li:hover {
   font-weight: 400;
 }
 
+/* --------------- parallax --------------- */
+
+.parallax-container {
+  height: 30vh;
+}
+
+/* --------------- temporary section styling --------------- */
+
+#band,
+#blog,
+#tour {
+  min-height: 800px;
+}
+
 /* --------------- footer --------------- */
 
 footer {
