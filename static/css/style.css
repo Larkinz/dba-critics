@@ -106,7 +106,7 @@ body {
 
 .enter-site-button:hover {
   transform: scale(1.05);
-  background: #fa7e0a99;
+  background: rgba(250, 126, 10, 0.6);
 }
 
 /* --------------- navbar --------------- */
@@ -296,7 +296,7 @@ nav ul li:hover {
   margin-top: 10px;
   width: 200px;
   color: #fffef7;
-  background-color: orange;
+  background-color: #fa7e0a;
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -310,17 +310,124 @@ nav ul li:hover {
   background-color: #09097a;
 }
 
+/* --------------- tour section --------------- */
+
+#tour {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-container {
+  background-color: rgba(231, 231, 224, 0.5);
+  padding: 16px;
+  margin: 30px 0px;
+  height: 160px;
+  border: 2px solid #fa7e0a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.tour-date {
+  text-align: center;
+  white-space: pre-line;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-date h3 {
+  font-weight: 600;
+  font-size: 2.7rem;
+}
+
+.tour-venue {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-venue h3 {
+  font-weight: 500;
+  font-size: 2.7rem;
+}
+
+.tour-location {
+  text-align: center;
+  white-space: pre-line;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-location h3 {
+  font-weight: 500;
+  font-size: 2.7rem;
+}
+
+.rsvp-btn-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsvp-btn {
+  width: 110px;
+  color: #fffef7;
+  background-color: #09097a;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.rsvp-btn:hover {
+  background-color: #fa7e0a;
+  transform: scale(1.05);
+}
+
+.rsvp-btn:focus {
+  background-color: #fa7e0a;
+}
+
+.tickets-btn-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tickets-btn {
+  width: 150px;
+  color: #fffef7;
+  background-color: #fa7e0a;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.tickets-btn:hover {
+  background-color: #09097a;
+  transform: scale(1.05);
+}
+
+.tickets-btn:focus {
+  background-color: #09097a;
+}
+
 /* --------------- parallax --------------- */
 
 .parallax-container {
   height: 30vh;
   margin-top: 20px;
-}
-
-/* --------------- temporary section styling --------------- */
-
-#tour {
-  min-height: 800px;
 }
 
 /* --------------- footer --------------- */
@@ -479,5 +586,129 @@ footer i:hover {
   .single-blog-container p {
     font-size: 1.2rem;
     margin-top: 4px;
+  }
+}
+
+/* --------------- homepage tour section media queries --------------- */
+
+@media (max-width: 1140px) {
+  .tour-container {
+    padding: 8px;
+  }
+
+  .tour-date h3,
+  .tour-venue h3,
+  .tour-location h3 {
+    font-size: 2.5rem;
+  }
+
+  .rsvp-btn {
+    width: 90px;
+    font-size: 1.4rem;
+  }
+
+  .tickets-btn {
+    width: 130px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .tour-date h3,
+  .tour-venue h3,
+  .tour-location h3 {
+    font-size: 2.2rem;
+  }
+
+  .rsvp-btn {
+    width: 70px;
+    font-size: 1.3rem;
+  }
+
+  .tickets-btn {
+    width: 110px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .tour-container {
+    margin: 20px 0px;
+    height: 120px;
+  }
+
+  .tour-date h3,
+  .tour-venue h3,
+  .tour-location h3 {
+    font-size: 2rem;
+  }
+
+  .rsvp-btn {
+    width: 70px;
+    font-size: 1.2rem;
+  }
+
+  .tickets-btn {
+    width: 110px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .tour-container {
+    align-self: center;
+    height: auto;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin: 10px 0px;
+  }
+
+  .tour-date h3,
+  .tour-venue h3,
+  .tour-location h3 {
+    margin: 0;
+    white-space: normal;
+    margin-bottom: 12px;
+  }
+
+  .rsvp-btn {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 530px) {
+  .tour-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 440px) {
+  .tour-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 370px) {
+  .tour-container {
+    width: 100%;
+  }
+
+  .tour-date h3,
+  .tour-venue h3,
+  .tour-location h3 {
+    font-size: 1.8rem;
+  }
+
+  .rsvp-btn {
+    width: 60px;
+    font-size: 1.1rem;
+  }
+
+  .tickets-btn {
+    width: 100px;
+    font-size: 1.1rem;
   }
 }
