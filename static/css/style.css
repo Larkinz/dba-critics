@@ -449,6 +449,70 @@ footer i:hover {
   color: rgba(255, 254, 247, 0.6);
 }
 
+/* --------------- homepage home section media queries --------------- */
+
+@media (max-width: 1367px) {
+  .welcome-container h2,
+  .dba-info-container h2 {
+    font-size: 2.4rem;
+    margin: 8px 0px 6px 0px;
+  }
+
+  .welcome-container p,
+  .dba-info-container p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1025px) {
+  .welcome-container h2,
+  .dba-info-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .welcome-container p,
+  .dba-info-container p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 601px) {
+  .welcome-container h2,
+  .dba-info-container h2 {
+    font-size: 2rem;
+  }
+
+  .welcome-container p,
+  .dba-info-container p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 486px) {
+  .welcome-container h2,
+  .dba-info-container h2 {
+    font-size: 1.9rem;
+    margin: 6px 0px 4px 0px;
+  }
+
+  .welcome-container p,
+  .dba-info-container p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 352px) {
+  .welcome-container h2,
+  .dba-info-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-container p,
+  .dba-info-container p {
+    font-size: 1.1rem;
+  }
+}
+
 /* --------------- homepage band section media queries --------------- */
 
 @media (max-width: 1316px) {
