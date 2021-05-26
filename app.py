@@ -31,6 +31,11 @@ def homepage():
     return render_template("homepage.html")
 
 
+@app.route("/albums")
+def albums():
+    return render_template("albums.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
