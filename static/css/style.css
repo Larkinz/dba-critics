@@ -449,6 +449,136 @@ footer i:hover {
   color: rgba(255, 254, 247, 0.6);
 }
 
+/* --------------- welcome / landing page media queries --------------- */
+
+@media (max-width: 1025px) {
+  .landing-page-content {
+    margin-bottom: 40px;
+  }
+
+  .landing-page-title {
+    font-size: 4.4rem;
+    margin-bottom: 10px;
+  }
+
+  .landing-page-subtitle {
+    font-size: 2.2rem;
+    margin-bottom: 6px;
+  }
+
+  .enter-site-button {
+    padding: 6px 20px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 870px) {
+  .landing-page-content {
+    margin-bottom: 30px;
+  }
+
+  .landing-page-title {
+    font-size: 4rem;
+    margin-bottom: 8px;
+  }
+
+  .landing-page-subtitle {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .enter-site-button {
+    padding: 5px 18px;
+    margin-top: 7px;
+    margin-bottom: 11px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .landing-page-title {
+    font-size: 3.4rem;
+    margin-bottom: 6px;
+  }
+
+  .landing-page-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+  }
+
+  .enter-site-button {
+    padding: 4px 12px;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    font-size: 1.4rem;
+  }
+
+  .landing-page-content img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 454px) {
+  .landing-page-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 454px) {
+  .landing-page-title {
+    font-size: 3rem;
+  }
+
+  .landing-page-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .landing-page-content img {
+    width: 70px;
+  }
+}
+
+@media (max-width: 399px) {
+  .landing-page-title {
+    font-size: 2.6rem;
+    text-shadow: 2px 1px #000000;
+  }
+
+  .landing-page-subtitle {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #000000;
+  }
+}
+
+@media (max-width: 352px) {
+  .landing-page-title {
+    font-size: 2.3rem;
+  }
+
+  .landing-page-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .enter-site-button {
+    padding: 4px 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 318px) {
+  .landing-page-title {
+    font-size: 2rem;
+  }
+
+  .landing-page-subtitle {
+    font-size: 1.3rem;
+  }
+}
+
 /* --------------- parallax media queries --------------- */
 
 @media (max-width: 1367px) {
