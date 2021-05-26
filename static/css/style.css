@@ -449,6 +449,28 @@ footer i:hover {
   color: rgba(255, 254, 247, 0.6);
 }
 
+/* --------------- parallax media queries --------------- */
+
+@media (max-width: 1367px) {
+  .parallax-container {
+    height: 25vh;
+  }
+}
+
+@media (max-width: 1025px) {
+  .parallax-container {
+    height: 20vh;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 769px) {
+  .parallax-container {
+    height: 15vh;
+    margin-top: 10px;
+  }
+}
+
 /* --------------- section-title media queries --------------- */
 
 @media (max-width: 1025px) {
