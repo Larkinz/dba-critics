@@ -430,6 +430,145 @@ nav ul li:hover {
   margin-top: 20px;
 }
 
+/* --------------- albums page --------------- */
+
+.album-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.album-collapsible {
+  width: 60%;
+  margin-bottom: 24px;
+}
+
+.album-one {
+  background-color: #2d2d31;
+  color: #fffef7;
+}
+
+.collapsible-header {
+  margin: 0;
+  padding: 6px;
+  display: flex;
+}
+
+.album-title-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+}
+
+.fa-caret-down {
+  color: red;
+  margin-left: 12px;
+}
+
+.collapsible-body {
+  padding: 3%;
+}
+
+.album-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album-content-container img {
+  height: auto;
+  width: 60%;
+  box-shadow: 3px 3px 5px 5px rgb(160, 160, 160);
+}
+
+.album-info {
+  width: 60%;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.album-info span {
+  font-weight: 600;
+}
+
+/* --- tracklist --- */
+
+.tracklist-title-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+
+.collapsible-body-tracklist-info {
+  padding: 0;
+  border-bottom: none;
+}
+
+.tracklist-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.regular-tracklist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bonus-tracklist-header {
+  text-align: center;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: #fda827b3;
+  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+}
+
+.track {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  color: black;
+  width: 100%;
+  background-color: rgba(134, 145, 240, 0.671);
+  border-bottom: 1px solid black;
+}
+
+.bonus-tracklist {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- comments */
+
+.comments-title-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+
+/* --- rating --- */
+
+.album-rating-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fa7e0a;
+  font-size: 2.2rem;
+  padding: 6px;
+}
+
 /* --------------- footer --------------- */
 
 footer {
