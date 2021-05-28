@@ -13,4 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
         indicators: false,
         interval: 8000,
     });
+
+    // initialize materialize collapsible
+    const COLLAPSIBLE = document.querySelectorAll(".collapsible.expandable");
+    M.Collapsible.init(COLLAPSIBLE, {
+        accordion: false
+    });
 });
