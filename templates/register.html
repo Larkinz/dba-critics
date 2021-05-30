@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- registration form -->
+    <section class="container">
+        <div class="register-form-container">
+            <form class="register-form" method="POST" action="{{ url_for('register') }}">
+                <h3>Register</h3>
+                <!-- username -->
+                <div class="input-field">
+                    <i class="fas fa-user-plus prefix"></i>
+                    <input id="username" name="username" type="text" minlength="3" maxlength="24"
+                        pattern="^[a-z0-9]{3,24}$" class="validate" placeholder="USERNAME" required>
+                    <label for="username">Username (a-z, 0-9)</label>
+                </div>
+                <!-- password -->
+                <div class="input-field">
+                    <i class="fas fa-user-lock prefix"></i>
+                    <input id="password" name="password" type="password" minlength="8" maxlength="24"
+                        pattern="^[A-Za-z0-9_-]*${8,24}$" class="validate" placeholder="PASSWORD" required>
+                    <label for="password">Password (Length: 8-24)</label>
+                </div>
+                <!-- register -->
+                <button type="submit" class="register-btn">
+                    Register <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </form>
+            <div class="navigate-login-container">
+                <div>
+                    <p class="center-align">
+                        Already registered?
+                        <a href="{{ url_for('login') }}">Log in here</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
