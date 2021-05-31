@@ -21,19 +21,23 @@
         <nav>
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="index.html" class="brand-logo">
+                    <a href="{{ url_for('homepage') }}" class="brand-logo">
                         <img width="200px" class="responsive-img" src="/static/img/dbac-logo-transparent.png">
                     </a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
                         <i class="material-icons">menu</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
-                        <li class="waves-effect waves-custom"><a href="#">Home</a></li>
-                        <li class="waves-effect waves-custom"><a href="#">Band</a></li>
-                        <li class="waves-effect waves-custom"><a href="#">Blog</a></li>
-                        <li class="waves-effect waves-custom"><a href="#">Tour</a></li>
-                        <li class="waves-effect waves-custom"><a href="#">Albums</a></li>
-                        <li class="waves-effect waves-custom"><a href="#">Login</a></li>
+                        <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='home') }}">Home</a></li>
+                        <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='band') }}">Band</a></li>
+                        <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='blog') }}">Blog</a></li>
+                        <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='tour') }}">Tour</a></li>
+                        <li class="waves-effect waves-custom"><a href="{{ url_for('albums') }}">Albums</a></li>
+                        {% if session.user %}
+                            <li class="waves-effect waves-custom"><a href="{{ url_for('logout') }}">Log out</a></li>
+                        {% else %}
+                            <li class="waves-effect waves-custom"><a href="{{ url_for('login') }}">Log in</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -45,12 +49,16 @@
         <div class="sidenav-logo-container">
             <img class="sidenav-logo" src="/static/img/dbac-logo-transparent.png">
         </div>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Band</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Tour</a></li>
-        <li><a href="#">Albums</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="{{ url_for('.homepage', _anchor='home') }}">Home</a></li>
+        <li><a href="{{ url_for('.homepage', _anchor='band') }}">Band</a></li>
+        <li><a href="{{ url_for('.homepage', _anchor='blog') }}">Blog</a></li>
+        <li><a href="{{ url_for('.homepage', _anchor='tour') }}">Tour</a></li>
+        <li><a href="{{ url_for('albums') }}">Albums</a></li>
+        {% if session.user %}
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+        {% else %}
+            <li><a href="{{ url_for('login') }}">Log in</a></li>
+        {% endif %}
     </ul>
 
     {% block content %}
