@@ -638,6 +638,7 @@ nav ul li:hover {
 }
 
 .comment-container p {
+  overflow-wrap: break-word; /* --- credits #?? (see README.md credits section) --- */
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
