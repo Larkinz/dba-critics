@@ -38,6 +38,37 @@ def albums():
     return render_template("albums.html", comments=comments)
 
 
+@app.route("/<album_id>", methods=['POST'])
+def post_comment(album_id):
+    if request.method == "POST":
+        if album_id == "001":
+            comment = {
+                "comment": request.form.get("album_001_comment"),
+                "album_id": "001",
+                "username": session["user"]
+            }
+        elif album_id == "002":
+            comment = {
+                "comment": request.form.get("album_002_comment"),
+                "album_id": "002",
+                "username": session["user"]
+            }
+        elif album_id == "003":
+            comment = {
+                "comment": request.form.get("album_003_comment"),
+                "album_id": "003",
+                "username": session["user"]
+            }
+        elif album_id == "004":
+            comment = {
+                "comment": request.form.get("album_004_comment"),
+                "album_id": "004",
+                "username": session["user"]
+            }
+        mongo.db.comments.insert_one(comment)
+        return redirect(url_for('albums'))
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
