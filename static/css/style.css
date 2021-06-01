@@ -558,6 +558,30 @@ nav ul li:hover {
   font-size: 2.2rem;
 }
 
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #e7e7e0;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.comment-container h4 {
+  color: #2b2bc4;
+  margin: 0 0 4px 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.comment-container p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 /* --- rating --- */
 
 .album-rating-container {
