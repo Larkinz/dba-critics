@@ -34,7 +34,8 @@ def homepage():
 
 @app.route("/albums")
 def albums():
-    return render_template("albums.html")
+    comments = list(mongo.db.comments.find())
+    return render_template("albums.html", comments=comments)
 
 
 @app.route("/login", methods=["GET", "POST"])
