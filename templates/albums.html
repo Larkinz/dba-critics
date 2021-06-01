@@ -62,6 +62,20 @@
                     </div>
                     <!-- comments section -->
                     <div class="collapsible-body">
+                        {% if session.user %}
+                            <div class="write-comment">
+                                <form method="POST" action="{{ url_for('post_comment', album_id='001') }}">
+                                    <!-- write comment -->
+                                    <textarea class="comment-textarea" name="album_001_comment" id="album_001_comment" minlength="1" maxlength="300" placeholder="Write your comment here..."></textarea>
+                                    <label for="album_001_comment"></label>
+                                    <!-- submit comment -->
+                                    <button type="submit" class="comment-submit-btn">Submit</button>
+                                </form>
+                            </div>
+                        {% else %}
+                            <h4 class="login-notice"><a href="{{ url_for('login') }}">Log in</a> to write a comment!</h4>
+                        {% endif %}
+                        <!-- album 1 comments section -->
                         {% for comment in comments %}
                         {% if comment.album_id == "001" %}
                         <div class="comment-container">
@@ -143,6 +157,20 @@
                     </div>
                     <!-- comments section -->
                     <div class="collapsible-body">
+                        {% if session.user %}
+                            <div class="write-comment">
+                                <form method="POST" action="{{ url_for('post_comment', album_id='002') }}">
+                                    <!-- write comment -->
+                                    <textarea class="comment-textarea" name="album_002_comment" id="album_002_comment" minlength="1" maxlength="300" placeholder="Write your comment here..."></textarea>
+                                    <label for="album_002_comment"></label>
+                                    <!-- submit comment -->
+                                    <button type="submit" class="comment-submit-btn">Submit</button>
+                                </form>
+                            </div>
+                        {% else %}
+                            <h4 class="login-notice"><a href="{{ url_for('login') }}">Log in</a> to write a comment!</h4>
+                        {% endif %}
+                        <!-- album 2 comments section -->
                         {% for comment in comments %}
                         {% if comment.album_id == "002" %}
                         <div class="comment-container">
@@ -222,6 +250,20 @@
                     </div>
                     <!-- comments section -->
                     <div class="collapsible-body">
+                        {% if session.user %}
+                            <div class="write-comment">
+                                <form method="POST" action="{{ url_for('post_comment', album_id='003') }}">
+                                    <!-- write comment -->
+                                    <textarea class="comment-textarea" name="album_003_comment" id="album_003_comment" minlength="1" maxlength="300" placeholder="Write your comment here..."></textarea>
+                                    <label for="album_003_comment"></label>
+                                    <!-- submit comment -->
+                                    <button type="submit" class="comment-submit-btn">Submit</button>
+                                </form>
+                            </div>
+                        {% else %}
+                            <h4 class="login-notice"><a href="{{ url_for('login') }}">Log in</a> to write a comment!</h4>
+                        {% endif %}
+                        <!-- album 3 comments section -->
                         {% for comment in comments %}
                         {% if comment.album_id == "003" %}
                         <div class="comment-container">
@@ -295,6 +337,20 @@
                     </div>
                     <!-- comments section -->
                     <div class="collapsible-body">
+                        {% if session.user %}
+                            <div class="write-comment">
+                                <form method="POST" action="{{ url_for('post_comment', album_id='004') }}">
+                                    <!-- write comment -->
+                                    <textarea class="comment-textarea" name="album_004_comment" id="album_004_comment" minlength="1" maxlength="300" placeholder="Write your comment here..."></textarea>
+                                    <label for="album_004_comment"></label>
+                                    <!-- submit comment -->
+                                    <button type="submit" class="comment-submit-btn">Submit</button>
+                                </form>
+                            </div>
+                        {% else %}
+                            <h4 class="login-notice"><a href="{{ url_for('login') }}">Log in</a> to write a comment!</h4>
+                        {% endif %}
+                        <!-- album 4 comments section -->
                         {% for comment in comments %}
                         {% if comment.album_id == "004" %}
                         <div class="comment-container">
