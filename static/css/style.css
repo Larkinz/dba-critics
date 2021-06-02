@@ -600,6 +600,36 @@ nav ul li:hover {
 
 .comment-submit-btn:hover {
   background-color: #fa7e0a;
+  cursor: pointer;
+}
+
+.edit-comment-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fffef7;
+  background-color: #fa7e0a;
+  width: 64px;
+  margin: 6px 0;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}
+
+.edit-comment-btn a {
+  color: #fffef7;
+}
+
+.fa-pen-square {
+  margin-left: 6px;
+}
+
+.edit-comment-btn:hover {
+  background-color: #09097a;
+  cursor: pointer;
 }
 
 .login-notice {
@@ -654,6 +684,20 @@ nav ul li:hover {
   background-color: #fa7e0a;
   font-size: 2.2rem;
   padding: 6px;
+}
+
+/* --- modal --- */
+
+.modal {
+  padding: 10px;
+  background-color: #fffef7;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.modal-footer a {
+  font-weight: bold;
+  color: red;
 }
 
 /* --------------- registration page --------------- */
