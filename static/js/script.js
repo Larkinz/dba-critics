@@ -19,4 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
     M.Collapsible.init(COLLAPSIBLE, {
         accordion: false
     });
+
+    // initialize materialize modal
+    const MODAL = document.querySelectorAll('.modal');
+    M.Modal.init(MODAL, {
+        endingTop: '25%'
+    });
 });
