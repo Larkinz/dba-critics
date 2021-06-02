@@ -38,7 +38,7 @@ def albums():
     return render_template("albums.html", comments=comments)
 
 
-@app.route("/<album_id>", methods=['POST'])
+@app.route("/<album_id>", methods=["POST"])
 def post_comment(album_id):
     if request.method == "POST":
         if album_id == "001":
@@ -66,6 +66,37 @@ def post_comment(album_id):
                 "username": session["user"]
             }
         mongo.db.comments.insert_one(comment)
+        return redirect(url_for('albums'))
+
+
+@app.route("/edit_comment/<comment_id>/<album_id>", methods=["POST"])
+def edit_comment(comment_id, album_id):
+    if request.method == "POST":
+        if album_id == "001":
+            comment_edit = {
+                "comment": request.form.get("album_001_comment_edit"),
+                "album_id": "001",
+                "username": session["user"]
+            }
+        elif album_id == "002":
+            comment_edit = {
+                "comment": request.form.get("album_002_comment_edit"),
+                "album_id": "002",
+                "username": session["user"]
+            }
+        elif album_id == "003":
+            comment_edit = {
+                "comment": request.form.get("album_003_comment_edit"),
+                "album_id": "003",
+                "username": session["user"]
+            }
+        elif album_id == "004":
+            comment_edit = {
+                "comment": request.form.get("album_004_comment_edit"),
+                "album_id": "004",
+                "username": session["user"]
+            }
+        mongo.db.comments.update({"_id": ObjectId(comment_id)}, comment_edit)
         return redirect(url_for('albums'))
 
 
