@@ -83,7 +83,10 @@
                             <p>{{ comment.comment }}</p>
                             {% if session.user == comment.username %}
                                 <!-- Modal Trigger -->
-                                <button data-target="album_001_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                                <div class="edit-delete-btn-container">
+                                    <button data-target="album_001_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                                    <button data-target="delete_comment_modal{{ comment._id }}" class="modal-trigger delete-comment-btn">Delete<i class="fas fa-minus-square"></i></button>
+                                </div>
                             {% endif %}
                         </div>
                         {% endif %}
@@ -182,7 +185,10 @@
                             <p>{{ comment.comment }}</p>
                             {% if session.user == comment.username %}
                                 <!-- Modal Trigger -->
-                                <button data-target="album_002_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                                <div class="edit-delete-btn-container">
+                                    <button data-target="album_002_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                                    <button data-target="delete_comment_modal{{ comment._id }}" class="modal-trigger delete-comment-btn">Delete<i class="fas fa-minus-square"></i></button>
+                                </div>
                             {% endif %}
                         </div>
                         {% endif %}
@@ -279,7 +285,10 @@
                             <p>{{ comment.comment }}</p>
                             {% if session.user == comment.username %}
                                 <!-- Modal Trigger -->
-                                <button data-target="album_003_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                                <div class="edit-delete-btn-container">
+                                    <button data-target="album_003_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                                    <button data-target="delete_comment_modal{{ comment._id }}" class="modal-trigger delete-comment-btn">Delete<i class="fas fa-minus-square"></i></button>
+                                </div>
                             {% endif %}
                         </div>
                         {% endif %}
@@ -370,7 +379,10 @@
                             <p>{{ comment.comment }}</p>
                             {% if session.user == comment.username %}
                                 <!-- Modal Trigger -->
-                                <button data-target="album_004_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                                <div class="edit-delete-btn-container">
+                                    <button data-target="album_004_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                                    <button data-target="delete_comment_modal{{ comment._id }}" class="modal-trigger delete-comment-btn">Delete<i class="fas fa-minus-square"></i></button>
+                                </div>
                             {% endif %}
                         </div>
                         {% endif %}
@@ -455,6 +467,19 @@
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- delete comment modal -->
+    {% for comment in comments %}
+    <div id="delete_comment_modal{{ comment._id }}" class="modal delete-confirm-modal">
+        <div class="delete-confirm-container">
+            <h4>Are you sure?</h4>
+            <div class="delete-confirm">
+                <a href="{{ url_for('delete_comment', comment_id=comment._id) }}" class="btn-small green accent-4" id="confirm-yes">Yes</a>
+                <a href="#!" class="modal-close btn-small red accent-4" id="confirm-no">No</a>
+            </div>
         </div>
     </div>
     {% endfor %}
