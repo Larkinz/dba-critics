@@ -603,6 +603,12 @@ nav ul li:hover {
   cursor: pointer;
 }
 
+.comment-submit-btn:focus {
+  background-color: #fa7e0a;
+}
+
+/* - edit comment button - */
+
 .edit-comment-btn {
   display: flex;
   flex-direction: row;
@@ -630,6 +636,45 @@ nav ul li:hover {
 .edit-comment-btn:hover {
   background-color: #09097a;
   cursor: pointer;
+}
+
+.edit-comment-btn:focus {
+  background-color: #09097a;
+}
+
+/* - delete comment button - */
+
+.delete-comment-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fffef7;
+  background-color: #fa0a0a;
+  width: 82px;
+  margin: 6px 16px;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete-comment-btn a {
+  color: #fffef7;
+}
+
+.fa-minus-square {
+  margin-left: 6px;
+}
+
+.delete-comment-btn:hover {
+  background-color: #09097a;
+  cursor: pointer;
+}
+
+.delete-comment-btn:focus {
+  background-color: #09097a;
 }
 
 .login-notice {
@@ -675,6 +720,10 @@ nav ul li:hover {
   font-weight: 500;
 }
 
+.edit-delete-btn-container {
+  display: flex;
+}
+
 /* --- rating --- */
 
 .album-rating-container {
@@ -698,6 +747,33 @@ nav ul li:hover {
 .modal-footer a {
   font-weight: bold;
   color: red;
+}
+
+.delete-confirm-modal {
+  padding: 20px 10px;
+  background-color: #fffef7;
+  border-radius: 10px;
+  width: 20%;
+}
+
+.delete-confirm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete-confirm-container h4 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.delete-confirm {
+  display: flex;
+}
+
+#confirm-no {
+  margin-left: 12px;
 }
 
 /* --------------- registration page --------------- */
