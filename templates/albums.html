@@ -66,7 +66,7 @@
                             <div class="write-comment">
                                 <form method="POST" action="{{ url_for('post_comment', album_id='001') }}">
                                     <!-- write comment -->
-                                    <textarea class="comment-textarea" name="album_001_comment" id="album_001_comment" minlength="1" maxlength="300" placeholder="Write your comment here..."></textarea>
+                                    <textarea class="comment-textarea" name="album_001_comment" id="album_001_comment" minlength="1" maxlength="300" placeholder="Write your comment here..." required></textarea>
                                     <label for="album_001_comment"></label>
                                     <!-- submit comment -->
                                     <button type="submit" class="comment-submit-btn">Submit</button>
@@ -81,6 +81,10 @@
                         <div class="comment-container">
                             <h4>{{ comment.username }}</h4>
                             <p>{{ comment.comment }}</p>
+                            {% if session.user == comment.username %}
+                                <!-- Modal Trigger -->
+                                <button data-target="album_001_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                            {% endif %}
                         </div>
                         {% endif %}
                         {% endfor %}
@@ -161,7 +165,7 @@
                             <div class="write-comment">
                                 <form method="POST" action="{{ url_for('post_comment', album_id='002') }}">
                                     <!-- write comment -->
-                                    <textarea class="comment-textarea" name="album_002_comment" id="album_002_comment" minlength="1" maxlength="300" placeholder="Write your comment here..."></textarea>
+                                    <textarea class="comment-textarea" name="album_002_comment" id="album_002_comment" minlength="1" maxlength="300" placeholder="Write your comment here..." required></textarea>
                                     <label for="album_002_comment"></label>
                                     <!-- submit comment -->
                                     <button type="submit" class="comment-submit-btn">Submit</button>
@@ -176,6 +180,10 @@
                         <div class="comment-container">
                             <h4>{{ comment.username }}</h4>
                             <p>{{ comment.comment }}</p>
+                            {% if session.user == comment.username %}
+                                <!-- Modal Trigger -->
+                                <button data-target="album_002_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                            {% endif %}
                         </div>
                         {% endif %}
                         {% endfor %}
@@ -254,7 +262,7 @@
                             <div class="write-comment">
                                 <form method="POST" action="{{ url_for('post_comment', album_id='003') }}">
                                     <!-- write comment -->
-                                    <textarea class="comment-textarea" name="album_003_comment" id="album_003_comment" minlength="1" maxlength="300" placeholder="Write your comment here..."></textarea>
+                                    <textarea class="comment-textarea" name="album_003_comment" id="album_003_comment" minlength="1" maxlength="300" placeholder="Write your comment here..." required></textarea>
                                     <label for="album_003_comment"></label>
                                     <!-- submit comment -->
                                     <button type="submit" class="comment-submit-btn">Submit</button>
@@ -269,6 +277,10 @@
                         <div class="comment-container">
                             <h4>{{ comment.username }}</h4>
                             <p>{{ comment.comment }}</p>
+                            {% if session.user == comment.username %}
+                                <!-- Modal Trigger -->
+                                <button data-target="album_003_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                            {% endif %}
                         </div>
                         {% endif %}
                         {% endfor %}
@@ -341,7 +353,7 @@
                             <div class="write-comment">
                                 <form method="POST" action="{{ url_for('post_comment', album_id='004') }}">
                                     <!-- write comment -->
-                                    <textarea class="comment-textarea" name="album_004_comment" id="album_004_comment" minlength="1" maxlength="300" placeholder="Write your comment here..."></textarea>
+                                    <textarea class="comment-textarea" name="album_004_comment" id="album_004_comment" minlength="1" maxlength="300" placeholder="Write your comment here..." required></textarea>
                                     <label for="album_004_comment"></label>
                                     <!-- submit comment -->
                                     <button type="submit" class="comment-submit-btn">Submit</button>
@@ -356,6 +368,10 @@
                         <div class="comment-container">
                             <h4>{{ comment.username }}</h4>
                             <p>{{ comment.comment }}</p>
+                            {% if session.user == comment.username %}
+                                <!-- Modal Trigger -->
+                                <button data-target="album_004_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
+                            {% endif %}
                         </div>
                         {% endif %}
                         {% endfor %}
@@ -370,5 +386,77 @@
             </ul>
         </div>
     </section>
+
+    <!-- album 001 modal -->
+    {% for comment in comments %}
+    <div id="album_001_modal{{ comment._id }}" class="modal">
+        <div class="write-comment">
+            <form method="POST" action="{{ url_for('edit_comment', comment_id=comment._id, album_id='001') }}">
+                <!-- write comment -->
+                <textarea class="comment-textarea" name="album_001_comment_edit" id="album_001_comment_edit" minlength="1" maxlength="300" required>{{ comment.comment }}</textarea>
+                <label for="album_001_comment_edit"></label>
+                <!-- submit comment -->
+                <button type="submit" class="comment-submit-btn">Done</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- album 002 modal -->
+    {% for comment in comments %}
+    <div id="album_002_modal{{ comment._id }}" class="modal">
+        <div class="write-comment">
+            <form method="POST" action="{{ url_for('edit_comment', comment_id=comment._id, album_id='002') }}">
+                <!-- write comment -->
+                <textarea class="comment-textarea" name="album_002_comment_edit" id="album_002_comment_edit" minlength="1" maxlength="300" required>{{ comment.comment }}</textarea>
+                <label for="album_002_comment_edit"></label>
+                <!-- submit comment -->
+                <button type="submit" class="comment-submit-btn">Done</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- album 003 modal -->
+    {% for comment in comments %}
+    <div id="album_003_modal{{ comment._id }}" class="modal">
+        <div class="write-comment">
+            <form method="POST" action="{{ url_for('edit_comment', comment_id=comment._id, album_id='003') }}">
+                <!-- write comment -->
+                <textarea class="comment-textarea" name="album_003_comment_edit" id="album_003_comment_edit" minlength="1" maxlength="300" required>{{ comment.comment }}</textarea>
+                <label for="album_003_comment_edit"></label>
+                <!-- submit comment -->
+                <button type="submit" class="comment-submit-btn">Done</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- album 004 modal -->
+    {% for comment in comments %}
+    <div id="album_004_modal{{ comment._id }}" class="modal">
+        <div class="write-comment">
+            <form method="POST" action="{{ url_for('edit_comment', comment_id=comment._id, album_id='004') }}">
+                <!-- write comment -->
+                <textarea class="comment-textarea" name="album_004_comment_edit" id="album_004_comment_edit" minlength="1" maxlength="300" required>{{ comment.comment }}</textarea>
+                <label for="album_004_comment_edit"></label>
+                <!-- submit comment -->
+                <button type="submit" class="comment-submit-btn">Done</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    {% endfor %}
 
 {% endblock %}
