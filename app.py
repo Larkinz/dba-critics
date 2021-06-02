@@ -100,6 +100,12 @@ def edit_comment(comment_id, album_id):
         return redirect(url_for('albums'))
 
 
+@app.route("/delete_comment/<comment_id>")
+def delete_comment(comment_id):
+    mongo.db.comments.remove({"_id": ObjectId(comment_id)})
+    return redirect(url_for('albums'))
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
