@@ -68,6 +68,34 @@ def delete_comment(comment_id):
     return redirect(url_for('albums'))
 
 
+@app.route("/post_rating/<album_id>", methods=["POST"])
+def post_rating(album_id):
+    if request.method == "POST":
+        # check if user album rating already exists in database
+        existing_rating = mongo.db.ratings.find_one(
+            {"$and": [{"username": session["user"]}, {"album_id": album_id}]})
+
+        if existing_rating:
+            rating_edit = {
+                "rating": request.form.get(f"slider-album-{album_id}"),
+                "album_id": f"{album_id}",
+                "username": session["user"]
+            }
+            mongo.db.ratings.update(
+                {"_id": existing_rating.get('_id')}, rating_edit)
+            flash("You updated your rating!")
+            return redirect(url_for('login'))
+
+        rating = {
+            "rating": request.form.get(f"slider-album-{album_id}"),
+            "album_id": f"{album_id}",
+            "username": session["user"]
+        }
+        mongo.db.ratings.insert_one(rating)
+        flash("rating posted")
+        return redirect(url_for('login'))
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
