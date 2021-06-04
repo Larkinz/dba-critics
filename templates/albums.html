@@ -98,9 +98,14 @@
                         <div class="rating-header">Rating: {{ album001_avg_rating }} <span class="total-votes">({{ album001_vote_count }})</span></div>
                         <div class="rating-slider-container">
                             <form method="POST" action="{{ url_for('post_rating', album_id='001') }}">
+                                {% if session.user %}
                                 <input type="range" name="slider-album-001" id="slider-album-001" min="1" max="100"/>
                                 <p class="your-rating">Your rating: <span id="your-album-001-rating">-</span></p>
                                 <button type="submit" class="rating-submit-btn">Submit</button>
+                                {% else %}
+                                <input type="range" name="slider-album-001" id="slider-album-001" min="1" max="100" disabled/>
+                                <p class="your-rating">Log in to vote</p>
+                                {% endif %}
                             </form>
                         </div>
                     </div>
@@ -206,9 +211,14 @@
                         <div class="rating-header">Rating: {{ album002_avg_rating }} <span class="total-votes">({{ album002_vote_count }})</span></div>
                         <div class="rating-slider-container">
                             <form method="POST" action="{{ url_for('post_rating', album_id='002') }}">
+                                {% if session.user %}
                                 <input type="range" name="slider-album-002" id="slider-album-002" min="1" max="100"/>
                                 <p class="your-rating">Your rating: <span id="your-album-002-rating">-</span></p>
                                 <button type="submit" class="rating-submit-btn">Submit</button>
+                                {% else %}
+                                <input type="range" name="slider-album-002" id="slider-album-002" min="1" max="100" disabled/>
+                                <p class="your-rating">Log in to vote</p>
+                                {% endif %}
                             </form>
                         </div>
                     </div>
@@ -312,9 +322,14 @@
                         <div class="rating-header">Rating: {{ album003_avg_rating }} <span class="total-votes">({{ album003_vote_count }})</span></div>
                         <div class="rating-slider-container">
                             <form method="POST" action="{{ url_for('post_rating', album_id='003') }}">
+                                {% if session.user %}
                                 <input type="range" name="slider-album-003" id="slider-album-003" min="1" max="100"/>
                                 <p class="your-rating">Your rating: <span id="your-album-003-rating">-</span></p>
                                 <button type="submit" class="rating-submit-btn">Submit</button>
+                                {% else %}
+                                <input type="range" name="slider-album-003" id="slider-album-003" min="1" max="100" disabled/>
+                                <p class="your-rating">Log in to vote</p>
+                                {% endif %}
                             </form>
                         </div>
                     </div>
@@ -412,9 +427,14 @@
                         <div class="rating-header">Rating: {{ album004_avg_rating }} <span class="total-votes">({{ album004_vote_count }})</span></div>
                         <div class="rating-slider-container">
                             <form method="POST" action="{{ url_for('post_rating', album_id='004') }}">
+                                {% if session.user %}
                                 <input type="range" name="slider-album-004" id="slider-album-004" min="1" max="100"/>
                                 <p class="your-rating">Your rating: <span id="your-album-004-rating">-</span></p>
                                 <button type="submit" class="rating-submit-btn">Submit</button>
+                                {% else %}
+                                <input type="range" name="slider-album-004" id="slider-album-004" min="1" max="100" disabled/>
+                                <p class="your-rating">Log in to vote</p>
+                                {% endif %}
                             </form>
                         </div>
                     </div>
