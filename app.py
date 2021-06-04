@@ -35,7 +35,29 @@ def homepage():
 @app.route("/albums")
 def albums():
     comments = list(mongo.db.comments.find())
-    return render_template("albums.html", comments=comments)
+
+    album001_vote_count = 0
+    for x in mongo.db.ratings.find({"album_id": "001"}):
+        album001_vote_count = album001_vote_count + 1
+
+    album002_vote_count = 0
+    for x in mongo.db.ratings.find({"album_id": "002"}):
+        album002_vote_count = album002_vote_count + 1
+
+    album003_vote_count = 0
+    for x in mongo.db.ratings.find({"album_id": "003"}):
+        album003_vote_count = album003_vote_count + 1
+
+    album004_vote_count = 0
+    for x in mongo.db.ratings.find({"album_id": "004"}):
+        album004_vote_count = album004_vote_count + 1
+
+    return render_template("albums.html",
+                           comments=comments,
+                           album001_vote_count=album001_vote_count,
+                           album002_vote_count=album002_vote_count,
+                           album003_vote_count=album003_vote_count,
+                           album004_vote_count=album004_vote_count)
 
 
 @app.route("/<album_id>", methods=["POST"])
