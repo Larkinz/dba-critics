@@ -735,6 +735,207 @@ nav ul li:hover {
   padding: 6px;
 }
 
+.rating-header {
+  margin-bottom: 16px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.total-votes {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #09097a;
+  font-style: italic;
+}
+
+/* --- input range slider */
+
+.rating-slider-container {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  height: 40px;
+  width: 80%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-slider-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- credits #?? (see README.md credits section) --- */
+input[type="range"] {
+  width: 80% !important;
+  margin: 7px 0 !important;
+  background-color: transparent !important;
+  -webkit-appearance: none !important;
+}
+
+input[type="range"]:focus {
+  outline: none !important;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #fffef7 !important;
+  border: 0 !important;
+  border-radius: 25px !important;
+  width: 80% !important;
+  height: 6px !important;
+  cursor: pointer !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  margin-top: -5px !important;
+  width: 16px !important;
+  height: 16px !important;
+  background: #09097a !important;
+  border: 0 !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  -webkit-appearance: none !important;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: rgba(255, 254, 247, 0.8) !important;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #fffef7 !important;
+  border: 0 !important;
+  border-radius: 25px !important;
+  width: 80% !important;
+  height: 6px !important;
+  cursor: pointer !important;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px !important;
+  height: 16px !important;
+  background: #09097a !important;
+  border: 0 !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+}
+
+input[type="range"]::-ms-track {
+  background: transparent !important;
+  border-color: transparent !important;
+  border-width: 7px 0 !important;
+  color: transparent !important;
+  width: 80% !important;
+  height: 6px !important;
+  cursor: pointer !important;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #fffef7 !important;
+  border: 0 !important;
+  border-radius: 50px !important;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #fffef7 !important;
+  border: 0 !important;
+  border-radius: 50px !important;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 16px !important;
+  height: 16px !important;
+  background: #09097a !important;
+  border: 0 !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  margin-top: 0px !important;
+  /*Needed to keep the Edge thumb centred*/
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: rgba(255, 254, 247, 0.8) !important;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: rgba(255, 254, 247, 0.8) !important;
+}
+
+#slider-album-001,
+#slider-album-002,
+#slider-album-003,
+#slider-album-004 {
+  border: none !important;
+  outline: none !important;
+}
+
+#slider-album-001::after,
+#slider-album-002::after,
+#slider-album-003::after,
+#slider-album-004::after {
+  content: "100";
+  color: #09097a;
+  font-size: 2rem;
+  font-weight: 500;
+  position: absolute;
+  right: 0%;
+  top: 8px;
+}
+
+#slider-album-001::before,
+#slider-album-002::before,
+#slider-album-003::before,
+#slider-album-004::before {
+  content: "1";
+  color: #09097a;
+  font-size: 2rem;
+  font-weight: 500;
+  position: absolute;
+  left: 0%;
+  top: 8px;
+}
+
+.your-rating {
+  color: #000000;
+  margin-top: 0px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#your-album-001-rating,
+#your-album-002-rating,
+#your-album-003-rating,
+#your-album-004-rating {
+  color: #fffef7;
+}
+
+.rating-submit-btn {
+  color: #fffef7;
+  background-color: #09097a;
+  margin: 6px 0 16px 0px;
+  padding: 6px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+}
+
+.rating-submit-btn:hover {
+  color: #09097a;
+  background-color: #fffef7;
+  cursor: pointer;
+}
+
+.rating-submit-btn:focus {
+  color: #09097a;
+  background-color: #fffef7;
+}
+
 /* --- modal --- */
 
 .modal {
