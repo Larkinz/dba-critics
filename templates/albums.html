@@ -95,7 +95,7 @@
                 </li>
                 <li>
                     <div class="album-rating-container">
-                        <div class="rating-header">Rating: 71 <span class="total-votes">(11)</span></div>
+                        <div class="rating-header">Rating: 71 <span class="total-votes">({{ album001_vote_count }})</span></div>
                         <div class="rating-slider-container">
                             <form method="POST" action="{{ url_for('post_rating', album_id='001') }}">
                                 <input type="range" name="slider-album-001" id="slider-album-001" min="1" max="100"/>
@@ -203,7 +203,7 @@
                 </li>
                 <li>
                     <div class="album-rating-container">
-                        <div class="rating-header">Rating: 72 <span class="total-votes">(22)</span></div>
+                        <div class="rating-header">Rating: 72 <span class="total-votes">({{ album002_vote_count }})</span></div>
                         <div class="rating-slider-container">
                             <form method="POST" action="{{ url_for('post_rating', album_id='002') }}">
                                 <input type="range" name="slider-album-002" id="slider-album-002" min="1" max="100"/>
@@ -309,7 +309,7 @@
                 </li>
                 <li>
                     <div class="album-rating-container">
-                        <div class="rating-header">Rating: 73 <span class="total-votes">(33)</span></div>
+                        <div class="rating-header">Rating: 73 <span class="total-votes">({{ album003_vote_count }})</span></div>
                         <div class="rating-slider-container">
                             <form method="POST" action="{{ url_for('post_rating', album_id='003') }}">
                                 <input type="range" name="slider-album-003" id="slider-album-003" min="1" max="100"/>
@@ -409,7 +409,7 @@
                 </li>
                 <li>
                     <div class="album-rating-container">
-                        <div class="rating-header">Rating: 74 <span class="total-votes">(44)</span></div>
+                        <div class="rating-header">Rating: 74 <span class="total-votes">({{ album004_vote_count }})</span></div>
                         <div class="rating-slider-container">
                             <form method="POST" action="{{ url_for('post_rating', album_id='004') }}">
                                 <input type="range" name="slider-album-004" id="slider-album-004" min="1" max="100"/>
