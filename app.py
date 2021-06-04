@@ -100,7 +100,7 @@ def albums():
                            album004_avg_rating=album004_avg_rating)
 
 
-@ app.route("/<album_id>", methods=["POST"])
+@app.route("/<album_id>", methods=["POST"])
 def post_comment(album_id):
     if request.method == "POST":
         comment = {
@@ -112,7 +112,7 @@ def post_comment(album_id):
         return redirect(url_for('albums'))
 
 
-@ app.route("/edit_comment/<comment_id>/<album_id>", methods=["POST"])
+@app.route("/edit_comment/<comment_id>/<album_id>", methods=["POST"])
 def edit_comment(comment_id, album_id):
     if request.method == "POST":
         comment_edit = {
@@ -124,13 +124,13 @@ def edit_comment(comment_id, album_id):
         return redirect(url_for('albums'))
 
 
-@ app.route("/delete_comment/<comment_id>")
+@app.route("/delete_comment/<comment_id>")
 def delete_comment(comment_id):
     mongo.db.comments.remove({"_id": ObjectId(comment_id)})
     return redirect(url_for('albums'))
 
 
-@ app.route("/post_rating/<album_id>", methods=["POST"])
+@app.route("/post_rating/<album_id>", methods=["POST"])
 def post_rating(album_id):
     if request.method == "POST":
         # check if user album rating already exists in database
@@ -146,7 +146,7 @@ def post_rating(album_id):
             mongo.db.ratings.update(
                 {"_id": existing_rating.get('_id')}, rating_edit)
             flash("You updated your rating!")
-            return redirect(url_for('login'))
+            return redirect(url_for('albums'))
 
         rating = {
             "rating": request.form.get(f"slider-album-{album_id}"),
@@ -154,11 +154,11 @@ def post_rating(album_id):
             "username": session["user"]
         }
         mongo.db.ratings.insert_one(rating)
-        flash("rating posted")
-        return redirect(url_for('login'))
+        flash("Rating posted!")
+        return redirect(url_for('albums'))
 
 
-@ app.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         # check if username exists in database
@@ -169,6 +169,7 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
+                # put the user into 'session' cookie
                 session["user"] = request.form.get("username")
                 return redirect(url_for("albums"))
             else:
@@ -184,7 +185,7 @@ def login():
     return render_template("login.html")
 
 
-@ app.route("/register", methods=["GET", "POST"])
+@app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         # check if username already exists in database
@@ -192,7 +193,7 @@ def register():
             {"username": request.form.get("username")})
 
         if existing_user:
-            flash("Username already exists")
+            flash("Username already taken!")
             return redirect(url_for("register"))
 
         register = {
@@ -200,16 +201,13 @@ def register():
             "password": generate_password_hash(request.form.get("password"), method='pbkdf2:sha512')
         }
         mongo.db.users.insert_one(register)
-
-        # put the new user into 'session' cookie
-        session["user"] = request.form.get("username")
         flash("Registration complete!")
         return redirect(url_for("login"))
 
     return render_template("register.html")
 
 
-@ app.route("/logout")
+@app.route("/logout")
 def logout():
     # remove user from session cookie
     flash("You have been logged out")
