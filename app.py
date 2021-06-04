@@ -52,15 +52,55 @@ def albums():
     for x in mongo.db.ratings.find({"album_id": "004"}):
         album004_vote_count = album004_vote_count + 1
 
+    # find all album 001 ratings
+    album001_ratings = list(mongo.db.ratings.find({"album_id": "001"}))
+
+    # sum up all the album 001 ratings
+    album001_rating_sum = sum(int(d["rating"]) for d in album001_ratings)
+
+    # calculate average album 001 rating
+    album001_avg_rating = round(album001_rating_sum / album001_vote_count)
+
+    # find all album 002 ratings
+    album002_ratings = list(mongo.db.ratings.find({"album_id": "002"}))
+
+    # sum up all the album 002 ratings
+    album002_rating_sum = sum(int(d["rating"]) for d in album002_ratings)
+
+    # calculate average album 002 rating
+    album002_avg_rating = round(album002_rating_sum / album002_vote_count)
+
+    # find all album 003 ratings
+    album003_ratings = list(mongo.db.ratings.find({"album_id": "003"}))
+
+    # sum up all the album 003 ratings
+    album003_rating_sum = sum(int(d["rating"]) for d in album003_ratings)
+
+    # calculate average album 003 rating
+    album003_avg_rating = round(album003_rating_sum / album003_vote_count)
+
+    # find all album 004 ratings
+    album004_ratings = list(mongo.db.ratings.find({"album_id": "004"}))
+
+    # sum up all the album 004 ratings
+    album004_rating_sum = sum(int(d["rating"]) for d in album004_ratings)
+
+    # calculate average album 004 rating
+    album004_avg_rating = round(album004_rating_sum / album004_vote_count)
+
     return render_template("albums.html",
                            comments=comments,
                            album001_vote_count=album001_vote_count,
                            album002_vote_count=album002_vote_count,
                            album003_vote_count=album003_vote_count,
-                           album004_vote_count=album004_vote_count)
+                           album004_vote_count=album004_vote_count,
+                           album001_avg_rating=album001_avg_rating,
+                           album002_avg_rating=album002_avg_rating,
+                           album003_avg_rating=album003_avg_rating,
+                           album004_avg_rating=album004_avg_rating)
 
 
-@app.route("/<album_id>", methods=["POST"])
+@ app.route("/<album_id>", methods=["POST"])
 def post_comment(album_id):
     if request.method == "POST":
         comment = {
@@ -72,7 +112,7 @@ def post_comment(album_id):
         return redirect(url_for('albums'))
 
 
-@app.route("/edit_comment/<comment_id>/<album_id>", methods=["POST"])
+@ app.route("/edit_comment/<comment_id>/<album_id>", methods=["POST"])
 def edit_comment(comment_id, album_id):
     if request.method == "POST":
         comment_edit = {
@@ -84,13 +124,13 @@ def edit_comment(comment_id, album_id):
         return redirect(url_for('albums'))
 
 
-@app.route("/delete_comment/<comment_id>")
+@ app.route("/delete_comment/<comment_id>")
 def delete_comment(comment_id):
     mongo.db.comments.remove({"_id": ObjectId(comment_id)})
     return redirect(url_for('albums'))
 
 
-@app.route("/post_rating/<album_id>", methods=["POST"])
+@ app.route("/post_rating/<album_id>", methods=["POST"])
 def post_rating(album_id):
     if request.method == "POST":
         # check if user album rating already exists in database
@@ -118,7 +158,7 @@ def post_rating(album_id):
         return redirect(url_for('login'))
 
 
-@app.route("/login", methods=["GET", "POST"])
+@ app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         # check if username exists in database
@@ -144,7 +184,7 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/register", methods=["GET", "POST"])
+@ app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         # check if username already exists in database
@@ -169,7 +209,7 @@ def register():
     return render_template("register.html")
 
 
-@app.route("/logout")
+@ app.route("/logout")
 def logout():
     # remove user from session cookie
     flash("You have been logged out")
