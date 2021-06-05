@@ -70,8 +70,8 @@ body {
 
 .landing-page-content {
   z-index: 2;
-  align-self: flex-end;
-  margin-bottom: 60px;
+  position: fixed;
+  top: 75%;
 }
 
 .landing-page-title {
