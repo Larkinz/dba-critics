@@ -11,7 +11,9 @@
     <!-- load font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <!-- load custom css -->
-    <link href="/static/css/style.css" rel="stylesheet preload" as="style"/>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet preload" as="style"/>
+    <!-- load favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/dba-favicon.ico') }}">
     <title>DBA critics</title>
 </head>
 <body>
@@ -22,7 +24,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="{{ url_for('homepage') }}" class="brand-logo">
-                        <img width="200px" class="responsive-img" src="/static/img/dbac-logo-transparent.png">
+                        <img width="200px" class="responsive-img" src="{{ url_for('static', filename='img/dbac-logo-transparent.png') }}">
                     </a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
                         <i class="material-icons">menu</i>
@@ -55,7 +57,7 @@
     <!-- mobile sidenav -->
     <ul class="sidenav sidenav-close" id="mobile-demo">
         <div class="sidenav-logo-container">
-            <img class="sidenav-logo" src="/static/img/dbac-logo-transparent.png">
+            <img class="sidenav-logo" src="{{ url_for('static', filename='img/dbac-logo-transparent.png') }}">
         </div>
         {%- if request.path == url_for('homepage') %}
             <li class="waves-effect waves-custom"><a href="#home">Home</a></li>
@@ -96,7 +98,7 @@
     <!-- Compiled and minified JavaScript for Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- load custom javascript -->
-    <script src="/static/js/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 </html>

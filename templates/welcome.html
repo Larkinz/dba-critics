@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- load custom css -->
-    <link href="/static/css/style.css" rel="stylesheet preload" as="style"/>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet preload" as="style"/>
+    <!-- load favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/dba-favicon.ico') }}">
     <title>DBA critics</title>
 </head>
 <body>
@@ -14,13 +16,13 @@
     <section class="showcase">
         <div class="video-container">
             <!-- credits #?? (see README.md credits section) -->
-            <video src="/static/video/dba-warrior-clip.mov" autoplay muted loop></video>
+            <video src="{{ url_for('static', filename='video/dba-warrior-clip.mov') }}" autoplay muted loop></video>
         </div>
         <div class="landing-page-content">
             <h1 class="landing-page-title">Welcome to DBA critics</h1>
             <h3 class="landing-page-subtitle">A website for Dead by April fans</h3>
             <a href="{{ url_for('homepage') }}" class="enter-site-button">Enter site</a>
-            <div><img width="100px" src="/static/img/dbac-logo-transparent.png"></div>
+            <div><img width="100px" src="{{ url_for('static', filename='img/dbac-logo-transparent.png') }}"></div>
         </div>
     </section>
 
