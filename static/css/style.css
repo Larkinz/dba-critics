@@ -1298,6 +1298,28 @@ footer i:hover {
   }
 }
 
+/* --------------- navbar media queries --------------- */
+
+@media (max-width: 601px) {
+  .brand-logo {
+    line-height: 68px;
+  }
+
+  .brand-logo img {
+    width: 160px;
+  }
+}
+
+@media (max-width: 321px) {
+  .brand-logo {
+    line-height: 62px;
+  }
+
+  .brand-logo img {
+    width: 120px;
+  }
+}
+
 /* --------------- parallax media queries --------------- */
 
 @media (max-width: 1367px) {
