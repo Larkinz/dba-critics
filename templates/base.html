@@ -28,11 +28,19 @@
                         <i class="material-icons">menu</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
-                        <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='home') }}">Home</a></li>
-                        <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='band') }}">Band</a></li>
-                        <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='blog') }}">Blog</a></li>
-                        <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='tour') }}">Tour</a></li>
-                        <li class="waves-effect waves-custom"><a href="{{ url_for('albums') }}">Albums</a></li>
+                        {%- if request.path == url_for('homepage') %}
+                            <li class="waves-effect waves-custom"><a href="#home">Home</a></li>
+                            <li class="waves-effect waves-custom"><a href="#band">Band</a></li>
+                            <li class="waves-effect waves-custom"><a href="#blog">Blog</a></li>
+                            <li class="waves-effect waves-custom"><a href="#tour">Tour</a></li>
+                            <li class="waves-effect waves-custom"><a href="{{ url_for('albums') }}">Albums</a></li>
+                        {% else %}
+                            <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='home') }}">Home</a></li>
+                            <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='band') }}">Band</a></li>
+                            <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='blog') }}">Blog</a></li>
+                            <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='tour') }}">Tour</a></li>
+                            <li class="waves-effect waves-custom"><a href="{{ url_for('albums') }}">Albums</a></li>
+                        {% endif %}
                         {% if session.user %}
                             <li class="waves-effect waves-custom"><a href="{{ url_for('logout') }}">Log out</a></li>
                         {% else %}
@@ -49,11 +57,19 @@
         <div class="sidenav-logo-container">
             <img class="sidenav-logo" src="/static/img/dbac-logo-transparent.png">
         </div>
-        <li><a href="{{ url_for('.homepage', _anchor='home') }}">Home</a></li>
-        <li><a href="{{ url_for('.homepage', _anchor='band') }}">Band</a></li>
-        <li><a href="{{ url_for('.homepage', _anchor='blog') }}">Blog</a></li>
-        <li><a href="{{ url_for('.homepage', _anchor='tour') }}">Tour</a></li>
-        <li><a href="{{ url_for('albums') }}">Albums</a></li>
+        {%- if request.path == url_for('homepage') %}
+            <li class="waves-effect waves-custom"><a href="#home">Home</a></li>
+            <li class="waves-effect waves-custom"><a href="#band">Band</a></li>
+            <li class="waves-effect waves-custom"><a href="#blog">Blog</a></li>
+            <li class="waves-effect waves-custom"><a href="#tour">Tour</a></li>
+            <li class="waves-effect waves-custom"><a href="{{ url_for('albums') }}">Albums</a></li>
+        {% else %}
+            <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='home') }}">Home</a></li>
+            <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='band') }}">Band</a></li>
+            <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='blog') }}">Blog</a></li>
+            <li class="waves-effect waves-custom"><a href="{{ url_for('.homepage', _anchor='tour') }}">Tour</a></li>
+            <li class="waves-effect waves-custom"><a href="{{ url_for('albums') }}">Albums</a></li>
+        {% endif %}
         {% if session.user %}
             <li><a href="{{ url_for('logout') }}">Log out</a></li>
         {% else %}
