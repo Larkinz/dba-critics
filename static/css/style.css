@@ -1157,10 +1157,14 @@ footer {
   padding: 12px 0px;
 }
 
+footer div {
+  font-size: 2rem;
+}
+
 footer i {
   color: #fffef7;
   font-size: 4rem;
-  margin: 12px 18px;
+  margin: 16px 20px;
   padding: 0;
 }
 
@@ -1709,5 +1713,58 @@ footer i:hover {
   .tickets-btn {
     width: 100px;
     font-size: 1.1rem;
+  }
+}
+
+/* --------------- footer media queries --------------- */
+
+@media (max-width: 993px) {
+  footer {
+    padding: 12px 0px;
+  }
+
+  footer div {
+    font-size: 1.9rem;
+  }
+
+  footer i {
+    font-size: 3.6rem;
+    margin: 12px 16px;
+  }
+}
+
+@media (max-width: 651px) {
+  footer {
+    padding: 8px 0px;
+  }
+
+  footer div {
+    font-size: 1.7rem;
+  }
+
+  footer i {
+    font-size: 3.2rem;
+    margin: 10px 12px;
+  }
+}
+
+@media (max-width: 447px) {
+  footer {
+    padding: 8px 0px;
+  }
+
+  footer div {
+    font-size: 1.6rem;
+  }
+
+  footer i {
+    font-size: 3rem;
+    margin: 8px 10px;
+  }
+}
+
+@media (max-width: 340px) {
+  footer div {
+    font-size: 1.4rem;
   }
 }
