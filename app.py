@@ -88,6 +88,22 @@ def albums():
     # calculate average album 004 rating
     album004_avg_rating = round(album004_rating_sum / album004_vote_count)
 
+    # check if user has voted on album 001
+    has_voted_album001 = mongo.db.ratings.find_one(
+        {"$and": [{"username": session["user"]}, {"album_id": "001"}]})
+
+    # check if user has voted on album 002
+    has_voted_album002 = mongo.db.ratings.find_one(
+        {"$and": [{"username": session["user"]}, {"album_id": "002"}]})
+
+    # check if user has voted on album 003
+    has_voted_album003 = mongo.db.ratings.find_one(
+        {"$and": [{"username": session["user"]}, {"album_id": "003"}]})
+
+    # check if user has voted on album 004
+    has_voted_album004 = mongo.db.ratings.find_one(
+        {"$and": [{"username": session["user"]}, {"album_id": "004"}]})
+
     return render_template("albums.html",
                            comments=comments,
                            album001_vote_count=album001_vote_count,
@@ -97,7 +113,15 @@ def albums():
                            album001_avg_rating=album001_avg_rating,
                            album002_avg_rating=album002_avg_rating,
                            album003_avg_rating=album003_avg_rating,
-                           album004_avg_rating=album004_avg_rating)
+                           album004_avg_rating=album004_avg_rating,
+                           has_voted_album001=has_voted_album001,
+                           has_voted_album002=has_voted_album002,
+                           has_voted_album003=has_voted_album003,
+                           has_voted_album004=has_voted_album004,
+                           album001_ratings=album001_ratings,
+                           album002_ratings=album002_ratings,
+                           album003_ratings=album003_ratings,
+                           album004_ratings=album004_ratings)
 
 
 @app.route("/<album_id>", methods=["POST"])
