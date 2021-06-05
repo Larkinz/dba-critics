@@ -70,7 +70,7 @@ body {
 
 .landing-page-content {
   z-index: 2;
-  position: fixed;
+  position: absolute;
   top: 75%;
 }
 
