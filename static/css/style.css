@@ -14,6 +14,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -139,6 +140,8 @@ nav ul li:hover {
 
 .sidenav {
   background-color: #fffef7;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .sidenav-logo-container {
@@ -171,6 +174,7 @@ nav ul li:hover {
 #home {
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 56px;
 }
 
 .section-title {
@@ -198,6 +202,7 @@ nav ul li:hover {
 #band {
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 56px;
 }
 
 #pontus-container,
@@ -256,6 +261,7 @@ nav ul li:hover {
 #blog {
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 56px;
 }
 
 .double-blog-container {
@@ -315,6 +321,7 @@ nav ul li:hover {
 #tour {
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 56px;
 }
 
 .tour-container {
