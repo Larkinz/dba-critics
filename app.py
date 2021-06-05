@@ -89,20 +89,36 @@ def albums():
     album004_avg_rating = round(album004_rating_sum / album004_vote_count)
 
     # check if user has voted on album 001
-    has_voted_album001 = mongo.db.ratings.find_one(
-        {"$and": [{"username": session["user"]}, {"album_id": "001"}]})
+    has_voted_album001 = "false"
+    try:
+        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]}, {"album_id": "001"}]}):
+            has_voted_album001 = "true"
+    except:
+        has_voted_album001 = "false"
 
     # check if user has voted on album 002
-    has_voted_album002 = mongo.db.ratings.find_one(
-        {"$and": [{"username": session["user"]}, {"album_id": "002"}]})
+    has_voted_album002 = "false"
+    try:
+        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]}, {"album_id": "002"}]}):
+            has_voted_album002 = "true"
+    except:
+        has_voted_album002 = "false"
 
     # check if user has voted on album 003
-    has_voted_album003 = mongo.db.ratings.find_one(
-        {"$and": [{"username": session["user"]}, {"album_id": "003"}]})
+    has_voted_album003 = "false"
+    try:
+        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]}, {"album_id": "003"}]}):
+            has_voted_album003 = "true"
+    except:
+        has_voted_album003 = "false"
 
     # check if user has voted on album 004
-    has_voted_album004 = mongo.db.ratings.find_one(
-        {"$and": [{"username": session["user"]}, {"album_id": "004"}]})
+    has_voted_album004 = "false"
+    try:
+        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]}, {"album_id": "004"}]}):
+            has_voted_album004 = "true"
+    except:
+        has_voted_album004 = "false"
 
     return render_template("albums.html",
                            comments=comments,
