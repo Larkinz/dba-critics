@@ -2180,6 +2180,86 @@ footer i:hover {
   }
 }
 
+/* --------------- login & register page media queries --------------- */
+
+@media (max-width: 1151px) {
+  .register-form,
+  .login-form {
+    width: 65%;
+  }
+}
+
+@media (max-width: 751px) {
+  .register-form,
+  .login-form {
+    width: 80%;
+  }
+
+  .register-form h3,
+  .login-form h3 {
+    font-size: 2.7rem;
+  }
+
+  #username,
+  #password {
+    font-size: 1.3rem;
+  }
+
+  .input-field > label {
+    font-size: 1.2rem;
+  }
+
+  .register-btn,
+  .login-btn {
+    padding: 7px;
+    font-size: 1.4rem;
+  }
+
+  .navigate-login-container p,
+  .navigate-register-container p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 481px) {
+  .register-form,
+  .login-form {
+    width: 90%;
+    padding: 12px;
+  }
+
+  .register-form h3,
+  .login-form h3 {
+    font-size: 2.4rem;
+  }
+
+  .input-field .prefix ~ input {
+    width: 90% !important;
+  }
+
+  .navigate-login-container p,
+  .navigate-register-container p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 341px) {
+  .register-form,
+  .login-form {
+    width: 97%;
+  }
+
+  .register-btn,
+  .login-btn {
+    font-size: 1.2rem;
+  }
+
+  .navigate-login-container p,
+  .navigate-register-container p {
+    font-size: 1.4rem;
+  }
+}
+
 /* --------------- footer media queries --------------- */
 
 @media (max-width: 993px) {
