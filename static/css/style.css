@@ -1746,6 +1746,383 @@ footer i:hover {
   }
 }
 
+/* --------------- albums page media queries --------------- */
+
+@media (max-width: 1661px) {
+  .album-collapsible {
+    width: 61%;
+  }
+}
+
+@media (max-width: 1611px) {
+  .album-collapsible {
+    width: 62%;
+  }
+}
+
+@media (max-width: 1561px) {
+  .album-collapsible {
+    width: 63%;
+  }
+}
+
+@media (max-width: 1511px) {
+  .album-collapsible {
+    width: 64%;
+  }
+}
+
+@media (max-width: 1461px) {
+  .album-collapsible {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1411px) {
+  .album-collapsible {
+    width: 66%;
+  }
+}
+
+@media (max-width: 1361px) {
+  .album-collapsible {
+    width: 67%;
+  }
+}
+
+@media (max-width: 1311px) {
+  .album-collapsible {
+    width: 68%;
+  }
+}
+
+@media (max-width: 1261px) {
+  .album-collapsible {
+    width: 69%;
+  }
+}
+
+@media (max-width: 1211px) {
+  .album-collapsible {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1161px) {
+  .album-collapsible {
+    width: 72%;
+  }
+}
+
+@media (max-width: 1111px) {
+  .album-collapsible {
+    width: 74%;
+  }
+}
+
+@media (max-width: 1061px) {
+  .album-collapsible {
+    width: 76%;
+  }
+}
+
+@media (max-width: 1011px) {
+  .album-collapsible {
+    width: 78%;
+  }
+}
+
+@media (max-width: 961px) {
+  .album-collapsible {
+    width: 80%;
+  }
+}
+
+@media (max-width: 911px) {
+  .album-collapsible {
+    width: 82%;
+  }
+}
+
+@media (max-width: 861px) {
+  .album-collapsible {
+    width: 84%;
+  }
+}
+
+@media (max-width: 811px) {
+  .album-container {
+    margin-top: 16px;
+  }
+
+  .album-title-container,
+  .tracklist-title-container,
+  .comments-title-container {
+    font-size: 2.1rem;
+  }
+
+  .album-info {
+    margin-top: 10px;
+    font-size: 2.4rem;
+  }
+
+  .track,
+  .bonus-tracklist-header {
+    font-size: 1.7rem;
+  }
+
+  .comment-submit-btn {
+    padding: 6px;
+  }
+
+  .edit-comment-btn {
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    padding: 6px;
+    font-size: 1.3rem;
+    height: 28px;
+  }
+
+  .delete-comment-btn {
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    padding: 6px;
+    font-size: 1.3rem;
+    height: 28px;
+  }
+
+  .rating-header {
+    font-size: 2rem;
+  }
+
+  #slider-album-001::after,
+  #slider-album-002::after,
+  #slider-album-003::after,
+  #slider-album-004::after {
+    font-size: 1.8rem;
+  }
+
+  #slider-album-001::before,
+  #slider-album-002::before,
+  #slider-album-003::before,
+  #slider-album-004::before {
+    font-size: 1.8rem;
+  }
+
+  .collapsible-body-album-info {
+    padding: 2%;
+  }
+
+  .album-collapsible {
+    width: 86%;
+  }
+}
+
+@media (max-width: 761px) {
+  .album-collapsible {
+    width: 88%;
+  }
+}
+
+@media (max-width: 711px) {
+  .album-collapsible {
+    width: 90%;
+  }
+}
+
+@media (max-width: 561px) {
+  .album-container {
+    margin-top: 6px;
+  }
+
+  .collapsible-header {
+    padding: 4px;
+  }
+
+  .album-title-container,
+  .tracklist-title-container,
+  .comments-title-container {
+    font-size: 2rem;
+  }
+
+  .album-info {
+    margin-top: 6px;
+    font-size: 2.2rem;
+  }
+
+  .comment-submit-btn {
+    padding: 5px;
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .comment-container h4 {
+    margin: 0 0 3px 0;
+    font-size: 1.5rem;
+  }
+
+  .comment-container p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 441px) {
+  .album-collapsible {
+    width: 95%;
+  }
+
+  .album-info {
+    font-size: 2rem;
+  }
+
+  .edit-comment-btn {
+    height: 26px;
+    margin: 4px 0;
+  }
+
+  .delete-comment-btn {
+    height: 26px;
+    margin: 4px 12px;
+  }
+
+  .rating-header {
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+  }
+
+  .album-rating-container {
+    padding: 12px 8px 16px 8px;
+  }
+
+  .rating-submit-btn {
+    margin: 16px 0 16px 0px;
+  }
+
+  #slider-album-001::after,
+  #slider-album-002::after,
+  #slider-album-003::after,
+  #slider-album-004::after {
+    font-size: 1.6rem;
+  }
+
+  #slider-album-001::before,
+  #slider-album-002::before,
+  #slider-album-003::before,
+  #slider-album-004::before {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 371px) {
+  .track,
+  .bonus-tracklist-header {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 331px) {
+  .album-collapsible {
+    width: 100%;
+  }
+
+  .album-title-container,
+  .tracklist-title-container,
+  .comments-title-container {
+    font-size: 1.8rem;
+  }
+
+  .album-info {
+    font-size: 1.8rem;
+  }
+
+  .track,
+  .bonus-tracklist-header {
+    font-size: 1.5rem;
+  }
+
+  .comment-container h4 {
+    font-size: 1.4rem;
+  }
+
+  .comment-container p {
+    font-size: 1.3rem;
+  }
+
+  .comment-submit-btn {
+    padding: 6px;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .edit-comment-btn {
+    height: 24px;
+    width: 56px;
+    font-size: 1.2rem;
+  }
+
+  .delete-comment-btn {
+    height: 24px;
+    width: 70px;
+    font-size: 1.2rem;
+  }
+
+  .write-comment textarea {
+    font-size: 1.4rem;
+  }
+
+  .rating-header {
+    font-size: 1.7rem;
+  }
+
+  .total-votes {
+    font-size: 1.5rem;
+  }
+
+  .your-rating {
+    font-size: 1.3rem;
+  }
+
+  input[type="range"] {
+    width: 90% !important;
+  }
+}
+
+/* --- modal media queries --- */
+
+@media (max-width: 811px) {
+  .modal {
+    width: 65%;
+  }
+
+  .delete-confirm-modal {
+    width: 40%;
+  }
+}
+
+@media (max-width: 551px) {
+  .delete-confirm-modal {
+    width: 50%;
+  }
+}
+
+@media (max-width: 441px) {
+  .modal {
+    width: 90%;
+  }
+
+  .delete-confirm-modal {
+    width: 75%;
+  }
+}
+
+@media (max-width: 311px) {
+  .delete-confirm-modal {
+    width: 80%;
+  }
+}
+
 /* --------------- footer media queries --------------- */
 
 @media (max-width: 993px) {
