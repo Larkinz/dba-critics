@@ -28,7 +28,6 @@ body {
 
 #welcome-page-html,
 #welcome-page-body {
-  height: 100%;
   overflow: hidden;
 }
 
@@ -76,8 +75,8 @@ body {
 
 .landing-page-content {
   z-index: 2;
-  position: fixed;
-  top: 70%;
+  position: relative;
+  top: 25%;
 }
 
 .landing-page-title {
