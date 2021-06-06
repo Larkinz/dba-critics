@@ -2123,6 +2123,63 @@ footer i:hover {
   }
 }
 
+/* ----------- flash messages media queries ----------- */
+
+@media (max-width: 771px) {
+  .flashes {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .flashes h4 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 551px) {
+  .flashes {
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+
+  .flashes h4 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 421px) {
+  .flashes {
+    margin-top: 10px;
+    margin-bottom: 7px;
+  }
+
+  .flashes h4 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 331px) {
+  .flashes {
+    margin-top: 8px;
+    margin-bottom: 6px;
+  }
+
+  .flashes h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 297px) {
+  .flashes {
+    margin-top: 6px;
+    margin-bottom: 4px;
+  }
+
+  .flashes h4 {
+    font-size: 1.4rem;
+  }
+}
+
 /* --------------- footer media queries --------------- */
 
 @media (max-width: 993px) {
