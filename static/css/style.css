@@ -1308,6 +1308,30 @@ footer i:hover {
   }
 }
 
+@media (max-width: 721px) and (max-height: 561px) {
+  .landing-page-content {
+    top: 62%;
+  }
+}
+
+@media (max-width: 825px) and (max-height: 415px) {
+  .landing-page-content {
+    top: 48%;
+  }
+}
+
+@media (max-width: 581px) and (max-height: 332px) {
+  .landing-page-content {
+    top: 40%;
+  }
+}
+
+@media (max-width: 662px) and (max-height: 305px) {
+  .landing-page-content {
+    top: 35%;
+  }
+}
+
 /* --------------- navbar media queries --------------- */
 
 @media (max-width: 601px) {
