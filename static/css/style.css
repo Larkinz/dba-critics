@@ -76,6 +76,8 @@ body {
 
 .landing-page-content {
   z-index: 2;
+  position: fixed;
+  top: 70%;
 }
 
 .landing-page-title {
