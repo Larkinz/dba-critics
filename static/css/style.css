@@ -26,6 +26,12 @@ body {
 /* --------------- welcome / landing page --------------- */
 /* --- credits #?? (see README.md credits section) --- */
 
+#welcome-page-html,
+#welcome-page-body {
+  height: 100%;
+  overflow: hidden;
+}
+
 .showcase {
   height: 100vh;
   display: flex;
