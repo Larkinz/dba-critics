@@ -70,8 +70,6 @@ body {
 
 .landing-page-content {
   z-index: 2;
-  position: relative;
-  top: 25%;
 }
 
 .landing-page-title {
