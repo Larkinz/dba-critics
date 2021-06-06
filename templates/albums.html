@@ -94,7 +94,7 @@
                         <div class="comment-container">
                             <h4>{{ comment.username }}</h4>
                             <p>{{ comment.comment }}</p>
-                            {% if session.user == comment.username %}
+                            {% if session.user == comment.username or session.user == "AD" %}
                                 <!-- Modal Trigger -->
                                 <div class="edit-delete-btn-container">
                                     <button data-target="album_001_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
@@ -215,7 +215,7 @@
                         <div class="comment-container">
                             <h4>{{ comment.username }}</h4>
                             <p>{{ comment.comment }}</p>
-                            {% if session.user == comment.username %}
+                            {% if session.user == comment.username or session.user == "AD" %}
                                 <!-- Modal Trigger -->
                                 <div class="edit-delete-btn-container">
                                     <button data-target="album_002_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
@@ -334,7 +334,7 @@
                         <div class="comment-container">
                             <h4>{{ comment.username }}</h4>
                             <p>{{ comment.comment }}</p>
-                            {% if session.user == comment.username %}
+                            {% if session.user == comment.username or session.user == "AD" %}
                                 <!-- Modal Trigger -->
                                 <div class="edit-delete-btn-container">
                                     <button data-target="album_003_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
@@ -447,7 +447,7 @@
                         <div class="comment-container">
                             <h4>{{ comment.username }}</h4>
                             <p>{{ comment.comment }}</p>
-                            {% if session.user == comment.username %}
+                            {% if session.user == comment.username or session.user == "AD" %}
                                 <!-- Modal Trigger -->
                                 <div class="edit-delete-btn-container">
                                     <button data-target="album_004_modal{{ comment._id }}" class="modal-trigger edit-comment-btn">Edit<i class="fas fa-pen-square"></i></button>
