@@ -7,6 +7,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -34,8 +35,14 @@ body {
 
 .showcase {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   color: #fffef7;
@@ -59,7 +66,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -112,6 +122,8 @@ body {
 }
 
 .enter-site-button:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
   background: rgba(250, 126, 10, 0.6);
 }
@@ -119,6 +131,7 @@ body {
 /* --------------- navbar --------------- */
 
 nav {
+  background: -o-linear-gradient(210deg, #2b2bc4 0%, #09097a 100%);
   background: linear-gradient(240deg, #2b2bc4 0%, #09097a 100%);
 }
 
@@ -128,12 +141,20 @@ nav ul a {
 
 nav ul li:hover {
   background-color: #09097a;
+  -webkit-transition: background-color 2s ease 0s;
+  -o-transition: background-color 2s ease 0s;
   transition: background-color 2s ease 0s;
 }
 
 .brand-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   line-height: 82px;
 }
@@ -146,15 +167,27 @@ nav ul li:hover {
 
 .sidenav {
   background-color: #fffef7;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: column !important;
   flex-direction: column !important;
 }
 
 .sidenav-logo-container {
   height: 100px;
+  background: -o-linear-gradient(210deg, #2b2bc4 0%, #09097a 100%);
   background: linear-gradient(240deg, #2b2bc4 0%, #09097a 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -178,7 +211,12 @@ nav ul li:hover {
 /* --------------- home section --------------- */
 
 #home {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   scroll-margin-top: 56px;
 }
@@ -206,29 +244,55 @@ nav ul li:hover {
 /* --------------- band section --------------- */
 
 #band {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   scroll-margin-top: 56px;
 }
 
 #pontus-container,
 #marcusr-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 #marcusw-container,
 #christopher-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .slider,
 .artist-info-container {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 50%;
   flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -239,6 +303,7 @@ nav ul li:hover {
 }
 
 .slider .slides li img {
+  -o-object-fit: cover;
   object-fit: cover;
   height: 100%;
   width: auto;
@@ -265,20 +330,39 @@ nav ul li:hover {
 /* --------------- blog section --------------- */
 
 #blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   scroll-margin-top: 56px;
 }
 
 .double-blog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .single-blog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 50%;
   flex: 0 1 50%;
   background-color: rgba(231, 231, 224, 0.5);
   padding: 24px;
@@ -315,6 +399,8 @@ nav ul li:hover {
 
 .blog-btn:hover {
   background-color: #09097a;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -325,7 +411,12 @@ nav ul li:hover {
 /* --------------- tour section --------------- */
 
 #tour {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   scroll-margin-top: 56px;
 }
@@ -336,9 +427,18 @@ nav ul li:hover {
   margin: 30px 0px;
   height: 160px;
   border: 2px solid #fa7e0a;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 
@@ -347,8 +447,14 @@ nav ul li:hover {
   white-space: pre-line;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -361,8 +467,14 @@ nav ul li:hover {
   text-align: center;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -376,8 +488,14 @@ nav ul li:hover {
   white-space: pre-line;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -389,8 +507,14 @@ nav ul li:hover {
 .rsvp-btn-container {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -404,6 +528,8 @@ nav ul li:hover {
 
 .rsvp-btn:hover {
   background-color: #fa7e0a;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -414,8 +540,14 @@ nav ul li:hover {
 .tickets-btn-container {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -429,6 +561,8 @@ nav ul li:hover {
 
 .tickets-btn:hover {
   background-color: #09097a;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -446,9 +580,18 @@ nav ul li:hover {
 /* --------------- albums page --------------- */
 
 .album-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 24px;
 }
@@ -466,13 +609,21 @@ nav ul li:hover {
 .collapsible-header {
   margin: 0;
   padding: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .album-title-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 2.4rem;
 }
@@ -487,14 +638,22 @@ nav ul li:hover {
 }
 
 .album-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .album-content-container img {
   height: auto;
   width: 60%;
+  -webkit-box-shadow: 3px 3px 5px 5px rgb(160, 160, 160);
   box-shadow: 3px 3px 5px 5px rgb(160, 160, 160);
 }
 
@@ -514,8 +673,14 @@ nav ul li:hover {
 
 .tracklist-title-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 2.2rem;
 }
@@ -526,13 +691,25 @@ nav ul li:hover {
 }
 
 .tracklist-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .regular-tracklist {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -557,7 +734,12 @@ nav ul li:hover {
 }
 
 .bonus-tracklist {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -565,14 +747,25 @@ nav ul li:hover {
 
 .comments-title-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 2.2rem;
 }
 
 .write-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: #575755;
   margin-bottom: 12px;
@@ -588,6 +781,22 @@ nav ul li:hover {
   padding: 10px;
   border-radius: 10px;
   resize: vertical;
+}
+
+.comment-textarea::-webkit-input-placeholder {
+  color: #09097a;
+}
+
+.comment-textarea::-moz-placeholder {
+  color: #09097a;
+}
+
+.comment-textarea:-ms-input-placeholder {
+  color: #09097a;
+}
+
+.comment-textarea::-ms-input-placeholder {
+  color: #09097a;
 }
 
 .comment-textarea::placeholder {
@@ -623,8 +832,15 @@ nav ul li:hover {
 /* - edit comment button - */
 
 .edit-comment-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #fffef7;
   background-color: #fa7e0a;
@@ -658,8 +874,15 @@ nav ul li:hover {
 /* - delete comment button - */
 
 .delete-comment-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #fffef7;
   background-color: #fa0a0a;
@@ -709,7 +932,12 @@ nav ul li:hover {
 }
 
 .comment-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: #e7e7e0;
   margin-bottom: 12px;
@@ -734,14 +962,23 @@ nav ul li:hover {
 }
 
 .edit-delete-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 /* --- rating --- */
 
 .album-rating-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #fa7e0a;
   font-size: 2.2rem;
@@ -770,16 +1007,32 @@ nav ul li:hover {
   height: 40px;
   width: 80%;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .rating-slider-container form {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -971,8 +1224,15 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 .delete-confirm-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -983,6 +1243,8 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 .delete-confirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -993,16 +1255,30 @@ input[type="range"]:focus::-ms-fill-upper {
 /* --------------- registration page --------------- */
 
 .register-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
 .register-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 50%;
   min-height: 50px;
@@ -1039,6 +1315,8 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .register-btn:hover {
   background-color: #fa7e0a;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -1070,16 +1348,30 @@ input[type="range"]:focus::-ms-fill-upper {
 /* --------------- log in page --------------- */
 
 .login-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
 .login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 50%;
   min-height: 50px;
@@ -1111,6 +1403,8 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .login-btn:hover {
   background-color: #fa7e0a;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -1137,9 +1431,18 @@ input[type="range"]:focus::-ms-fill-upper {
 /* --- flash messages --- */
 
 .flashes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 24px;
   margin-bottom: 24px;
@@ -1181,9 +1484,18 @@ footer i:hover {
 /* --------------- error pages --------------- */
 
 .error-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 48px;
   background: #fffef7;
@@ -1537,22 +1849,36 @@ footer i:hover {
 @media (max-width: 992px) {
   #pontus-container,
   #marcusr-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   #marcusw-container,
   #christopher-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 
   .slider {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     height: 350px !important;
   }
 
   .artist-info-container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     height: auto;
   }
@@ -1611,6 +1937,9 @@ footer i:hover {
 
 @media (max-width: 992px) {
   .double-blog-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -1724,11 +2053,20 @@ footer i:hover {
 
 @media (max-width: 650px) {
   .tour-container {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     height: auto;
     width: 60%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 12px;
     margin: 10px 0px;
@@ -1911,7 +2249,11 @@ footer i:hover {
   }
 
   .edit-comment-btn {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 58px;
     padding: 6px;
@@ -1920,7 +2262,11 @@ footer i:hover {
   }
 
   .delete-comment-btn {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 76px;
     padding: 6px;
@@ -2410,3 +2756,10 @@ footer i:hover {
     font-size: 1.3rem;
   }
 }
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
