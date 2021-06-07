@@ -1178,6 +1178,41 @@ footer i:hover {
   color: rgba(255, 254, 247, 0.6);
 }
 
+/* --------------- error pages --------------- */
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: #fffef7;
+  color: #09097a;
+}
+
+.error-container h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.error-container p {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.error-container a {
+  color: #fa7e0a;
+  text-decoration: none;
+}
+
+.error-container a:hover {
+  color: #09097a;
+  cursor: pointer;
+}
+
 /* --------------- welcome / landing page media queries --------------- */
 
 @media (max-width: 1025px) {
