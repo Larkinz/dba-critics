@@ -38,20 +38,25 @@ def homepage():
 
 @app.route("/albums")
 def albums():
+    # grab all comments from the database
     comments = list(mongo.db.comments.find())
 
+    # count the total amount of votes on album 001
     album001_vote_count = 0
     for x in mongo.db.ratings.find({"album_id": "001"}):
         album001_vote_count = album001_vote_count + 1
 
+    # count the total amount of votes on album 002
     album002_vote_count = 0
     for x in mongo.db.ratings.find({"album_id": "002"}):
         album002_vote_count = album002_vote_count + 1
 
+    # count the total amount of votes on album 003
     album003_vote_count = 0
     for x in mongo.db.ratings.find({"album_id": "003"}):
         album003_vote_count = album003_vote_count + 1
 
+    # count the total amount of votes on album 004
     album004_vote_count = 0
     for x in mongo.db.ratings.find({"album_id": "004"}):
         album004_vote_count = album004_vote_count + 1
@@ -144,64 +149,84 @@ def albums():
                            album004_ratings=album004_ratings)
 
 
+# posting a comment functionality
 @app.route("/<album_id>", methods=["POST"])
 def post_comment(album_id):
     if request.method == "POST":
-        comment = {
-            "comment": request.form.get(f"album_{album_id}_comment"),
-            "album_id": f"{album_id}",
-            "username": session["user"]
-        }
-        mongo.db.comments.insert_one(comment)
-        return redirect(url_for('albums'))
+        try:
+            comment = {
+                "comment": request.form.get(f"album_{album_id}_comment"),
+                "album_id": f"{album_id}",
+                "username": session["user"]
+            }
+            mongo.db.comments.insert_one(comment)
+            return redirect(url_for('albums'))
+        except:
+            return render_template("500_error.html")
 
 
+# editing a comment functionality
 @app.route("/edit_comment/<comment_id>/<album_id>", methods=["POST"])
 def edit_comment(comment_id, album_id):
     if request.method == "POST":
-        comment_edit = {
-            "comment": request.form.get(f"album_{album_id}_comment_edit"),
-            "album_id": f"{album_id}",
-            "username": session["user"]
-        }
-        mongo.db.comments.update({"_id": ObjectId(comment_id)}, comment_edit)
-        return redirect(url_for('albums'))
+        try:
+            comment_edit = {
+                "comment": request.form.get(f"album_{album_id}_comment_edit"),
+                "album_id": f"{album_id}",
+                "username": session["user"]
+            }
+            mongo.db.comments.update(
+                {"_id": ObjectId(comment_id)}, comment_edit)
+            return redirect(url_for('albums'))
+        except:
+            return render_template("500_error.html")
 
 
+# deleting a comment functionality
 @app.route("/delete_comment/<comment_id>")
 def delete_comment(comment_id):
-    mongo.db.comments.remove({"_id": ObjectId(comment_id)})
-    return redirect(url_for('albums'))
+    try:
+        mongo.db.comments.remove({"_id": ObjectId(comment_id)})
+        return redirect(url_for('albums'))
+    except:
+        return render_template("500_error.html")
 
 
+# posting and updating album rating functionality
 @app.route("/post_rating/<album_id>", methods=["POST"])
 def post_rating(album_id):
     if request.method == "POST":
-        # check if user album rating already exists in database
-        existing_rating = mongo.db.ratings.find_one(
-            {"$and": [{"username": session["user"]}, {"album_id": album_id}]})
+        try:
+            # check if user album rating already exists in database
+            existing_rating = mongo.db.ratings.find_one(
+                {"$and": [{"username": session["user"]}, {"album_id": album_id}]})
 
-        if existing_rating:
-            rating_edit = {
+            # update album rating
+            if existing_rating:
+                rating_edit = {
+                    "rating": request.form.get(f"slider-album-{album_id}"),
+                    "album_id": f"{album_id}",
+                    "username": session["user"]
+                }
+                mongo.db.ratings.update(
+                    {"_id": existing_rating.get('_id')}, rating_edit)
+                flash("You updated your rating!")
+                return redirect(url_for('albums'))
+
+            # post album rating
+            rating = {
                 "rating": request.form.get(f"slider-album-{album_id}"),
                 "album_id": f"{album_id}",
                 "username": session["user"]
             }
-            mongo.db.ratings.update(
-                {"_id": existing_rating.get('_id')}, rating_edit)
-            flash("You updated your rating!")
+            mongo.db.ratings.insert_one(rating)
+            flash("Rating posted!")
             return redirect(url_for('albums'))
-
-        rating = {
-            "rating": request.form.get(f"slider-album-{album_id}"),
-            "album_id": f"{album_id}",
-            "username": session["user"]
-        }
-        mongo.db.ratings.insert_one(rating)
-        flash("Rating posted!")
-        return redirect(url_for('albums'))
+        except:
+            return render_template("500_error.html")
 
 
+# log in functionality
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -229,6 +254,7 @@ def login():
     return render_template("login.html")
 
 
+# register functionality
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -251,6 +277,7 @@ def register():
     return render_template("register.html")
 
 
+# log out functionality
 @app.route("/logout")
 def logout():
     # remove user from session cookie
