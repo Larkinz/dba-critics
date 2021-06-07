@@ -2347,3 +2347,66 @@ footer i:hover {
     font-size: 1.4rem;
   }
 }
+
+/* --------------- error pages media queries --------------- */
+
+@media (max-width: 551px) {
+  .error-container {
+    padding: 36px 12px;
+  }
+
+  .error-container h2 {
+    font-size: 2.7rem;
+  }
+
+  .error-container p {
+    font-size: 1.8rem;
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 451px) {
+  .error-container h2 {
+    font-size: 2.4rem;
+  }
+
+  .error-container p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 401px) {
+  .error-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .error-container p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 372px) {
+  .error-container h2 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 341px) {
+  .error-container h2 {
+    font-size: 2rem;
+  }
+
+  .error-container p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 318px) {
+  .error-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .error-container p {
+    font-size: 1.3rem;
+  }
+}
