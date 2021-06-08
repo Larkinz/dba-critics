@@ -1,12 +1,12 @@
 # DBA critics
 
-View live version of the website [here](placeholder).
+View live version of the website [here](http://dba-critics.herokuapp.com/).
 
 Milestone Project 3: Python and Data Centric Development – [Code Institute](https://codeinstitute.net/)
 
 This website was made as my third milestone project for the Code Institute course. The website was created for fans of the band [Dead by April](https://en.wikipedia.org/wiki/Dead_by_April), to provide them with some general information and to rate and discuss their album discography. The project requirements were to create a full-stack website using HTML, CSS, JavaScript, Python, Flask and MongoDB.
 
-![Website example](file-location-placeholder)
+![Website example](docs/website-example.png)
 
 ---
 
