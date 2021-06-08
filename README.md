@@ -418,6 +418,12 @@ All numbered references below correspond with a comment in either the HTML, CSS,
 
 #9: Used [this Flask documentation](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/) to create custom page routes for error handling.
 
+#29: Referenced [this code snippet](https://stackoverflow.com/a/3059128) from https://stackoverflow.com/ to fix comments without spaces to overflow the comment container.
+
+#30: Referenced [this code snippet](https://stackoverflow.com/a/61976688) from https://stackoverflow.com/ to fix the scroll margins not lining up with the container start.
+
+#31: Referenced [this code snippet](https://www.codegrepper.com/code-examples/css/disable+scroll+css) from https://www.codegrepper.com/ to fix the welcome page body or text contents overflowing.
+
 ### Text
 
 #10: Used and changed some parts of the text from the [Dead by April Wikipedia page](https://en.wikipedia.org/wiki/Dead_by_April) to mix with my own text.
