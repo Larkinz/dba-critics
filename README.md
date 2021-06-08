@@ -198,7 +198,13 @@ To keep the website looking uniform I will do my best to make sure that all rela
 
 ### Future features
 
-placeholder text
+- Adding a user profile page would be the next logical step, since it wasn't in my initial plan. On this page users could change their password and see an overview of their activities.
+
+- Add user avatars for people to see in the comment section.
+
+- A gallery page could be added where fans can post videos and photos of concerts they visited.
+
+- A rating system for individual songs could be added.
 
 **_[Back to top](#contents)_**
 
