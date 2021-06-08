@@ -396,19 +396,79 @@ os.environ.setdefault("MONGO_DBNAME", "enter your secret key here")
 
 ## Credits
 
-placeholder text
+All numbered references below correspond with a comment in either the HTML, CSS, JavaScript or Python code.
 
 ### Code
 
-placeholder text
+#1: Referenced [this video](https://www.youtube.com/watch?v=Gx_7GQtSdpc) by Traversy Media to build a landing page with video background.
+
+#2: Referenced [this code snippet](https://stackoverflow.com/a/35986097) from https://stackoverflow.com/ to have the correct non-jinja style anchor tags on the homepage navigation neccessary for smooth scroll to work properly.
+
+#3: Used the flash messages code from the Code Institute task app mini project.
+
+#4: Used http://danielstern.ca/range.css/#/ to create basic CSS range slider styling.
+
+#5: Referenced [this video](https://www.youtube.com/watch?v=BrpiNUf2XCk) by BananaCoding to build the range slider functionality in JavaScript.
+
+#6: Referenced [this code snippet](https://stackoverflow.com/a/54423510) from https://stackoverflow.com/ to enable the range slider submit button after input activity.
+
+#7: Used [this explanation](https://www.kite.com/python/answers/how-to-find-the-values-of-a-key-in-a-list-of-dictionaries-in-python) to extract the key values from my database dictionary list.
+
+#8: Referenced large parts of the functions from the Code Institute task app mini project to fit my own project needs.
+
+#9: Used [this Flask documentation](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/) to create custom page routes for error handling.
+
+### Text
+
+#10: Used and changed some parts of the text from the [Dead by April Wikipedia page](https://en.wikipedia.org/wiki/Dead_by_April) to mix with my own text.
+
+#11: Used and changed some parts of the text from the [Dead by April self-titled album Wikipedia page](<https://en.wikipedia.org/wiki/Dead_by_April_(album)>) to mix with my own text.
+
+### Media
+
+#12: Cut and edited [this video](https://www.youtube.com/watch?v=YXFGz8wsg7U) from the official Dead by April Youtube channel to use as a background for my landing page.
+
+#13: Used https://hatchful.shopify.com/ to create a custom website logo.
+
+#14: Used [this image](https://images.genius.com/d9f6fefb3071d491129a5f15799e8d76.1000x1000x1.jpg) as the first parallax image.
+
+#15: Used [this image](https://scontent-amt2-1.xx.fbcdn.net/v/t1.6435-9/164406221_307058887443506_1231868858661358691_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=e3f864&_nc_ohc=uE2y_K2TkXcAX9Y3ekM&_nc_ht=scontent-amt2-1.xx&oh=8480321a6fb9cb4493cd1b2e76ea8b75&oe=60D24583) as the second parallax image.
+
+#16: Used [this image](https://wallpapercave.com/wp/wp2169201.jpg) as the third parallax image.
+
+#17: Used [this photo](https://alterock.net/wp-content/uploads/2017/04/deadbyapril-pontushjelm-mayones-regius-03-b.jpg) of Pontus Hjelm as his primary slider image.
+
+#18: Used [this photo](https://live.staticflickr.com/2270/3840283861_9486e69f9a_b.jpg) of Pontus Hjelm as his secondary slider image.
+
+#19: Used [this photo](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ursynalia_2013%2C_Dead_by_April_02.jpg/599px-Ursynalia_2013%2C_Dead_by_April_02.jpg) of Marcus Wesslén as his primary slider image.
+
+#20: Used [this photo](http://www.cityspb.ru/f/a0/ru/auto/201405/06143201.1.th-1.jpg) of Marcus Wesslén as his secondary slider image.
+
+#21: Used [this photo](https://sun9-4.userapi.com/impf/c622424/v622424049/5f42a/GV0qdYdCfkg.jpg?size=640x640&quality=96&sign=46ab6fcb0c6619e2b703b99315ee737c&type=album) of Marcus Rosell as his primary slider image.
+
+#22: Used [this photo](https://aprillegion.com/images/gallery/marcus_rosell/marcus6.jpg) of Marcus Rosell as his secondary slider image.
+
+#23: Used [this photo](https://i.pinimg.com/originals/2e/cc/ea/2ecceada4c93cc2f24a65b677d778e31.jpg) of Christopher Kristensen as his primary slider image.
+
+#24: Used [this photo](https://aprillegion.com/images/gallery/christoffer_andersson/stoffe28.jpg) of Christopher Kristensen as his secondary slider image.
+
+#25: Used [this image](https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/c/5/6/e/21347.jpg) as the cover image for the self-titled 2009 _Dead by April_ album.
+
+#26: Used [this image](https://images.genius.com/e6d023aee031c0258e9edf088cf3e6ad.1000x1000x1.jpg) as the cover image for the 2011 _Incomparable_ album.
+
+#27: Used [this image](https://images.genius.com/c9c7605c56fc386284b8b03306a287d5.873x873x1.jpg) as the cover image for the 2014 _Let the World Know_ album.
+
+#28: Used [this image](http://images.genius.com/c97636d35b370f129e84ab4da23c06d1.1000x1000x1.jpg) as the cover image for the 2017 _Worlds Collide_ album.
 
 ### Miscellaneous
 
-placeholder text
+- Used https://coolors.co/ to create an image of my colour palette (see ['Surface'](#surface) section of the README).
 
-### Acknowledgements
+- Used https://autoprefixer.github.io/ to add vendor prefixes to CSS rules for better browser compatibility.
 
-placeholder text
+- Used https://app.diagrams.net/ to create an diagram image of my database schema.
+
+- Used http://ami.responsivedesign.is/ to create an example image of my website.
 
 **_[Back to top](#contents)_**
 
