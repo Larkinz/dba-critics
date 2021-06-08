@@ -65,6 +65,7 @@ def albums():
     album001_ratings = list(mongo.db.ratings.find({"album_id": "001"}))
 
     # sum up all the album 001 ratings
+    ### credits #7 (see README.md credits section) ###
     album001_rating_sum = sum(int(d["rating"]) for d in album001_ratings)
 
     # calculate average album 001 rating
@@ -74,6 +75,7 @@ def albums():
     album002_ratings = list(mongo.db.ratings.find({"album_id": "002"}))
 
     # sum up all the album 002 ratings
+    ### credits #7 (see README.md credits section) ###
     album002_rating_sum = sum(int(d["rating"]) for d in album002_ratings)
 
     # calculate average album 002 rating
@@ -83,6 +85,7 @@ def albums():
     album003_ratings = list(mongo.db.ratings.find({"album_id": "003"}))
 
     # sum up all the album 003 ratings
+    ### credits #7 (see README.md credits section) ###
     album003_rating_sum = sum(int(d["rating"]) for d in album003_ratings)
 
     # calculate average album 003 rating
@@ -92,6 +95,7 @@ def albums():
     album004_ratings = list(mongo.db.ratings.find({"album_id": "004"}))
 
     # sum up all the album 004 ratings
+    ### credits #7 (see README.md credits section) ###
     album004_rating_sum = sum(int(d["rating"]) for d in album004_ratings)
 
     # calculate average album 004 rating
@@ -150,6 +154,7 @@ def albums():
 
 
 # posting a comment functionality
+### credits #8 (see README.md credits section) ###
 @app.route("/<album_id>", methods=["POST"])
 def post_comment(album_id):
     if request.method == "POST":
@@ -166,6 +171,7 @@ def post_comment(album_id):
 
 
 # editing a comment functionality
+### credits #8 (see README.md credits section) ###
 @app.route("/edit_comment/<comment_id>/<album_id>", methods=["POST"])
 def edit_comment(comment_id, album_id):
     if request.method == "POST":
@@ -183,6 +189,7 @@ def edit_comment(comment_id, album_id):
 
 
 # deleting a comment functionality
+### credits #8 (see README.md credits section) ###
 @app.route("/delete_comment/<comment_id>")
 def delete_comment(comment_id):
     try:
@@ -193,6 +200,7 @@ def delete_comment(comment_id):
 
 
 # posting and updating album rating functionality
+### credits #8 (see README.md credits section) ###
 @app.route("/post_rating/<album_id>", methods=["POST"])
 def post_rating(album_id):
     if request.method == "POST":
@@ -227,6 +235,7 @@ def post_rating(album_id):
 
 
 # log in functionality
+### credits #8 (see README.md credits section) ###
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -255,6 +264,7 @@ def login():
 
 
 # register functionality
+### credits #8 (see README.md credits section) ###
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -278,6 +288,7 @@ def register():
 
 
 # log out functionality
+### credits #8 (see README.md credits section) ###
 @app.route("/logout")
 def logout():
     # remove user from session cookie
@@ -287,18 +298,21 @@ def logout():
 
 
 # 404 'page not found' error handler
+### credits #9 (see README.md credits section) ###
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404_error.html"), 404
 
 
 # 405 'method not allowed' error handler
+### credits #9 (see README.md credits section) ###
 @app.errorhandler(405)
 def page_not_found(e):
     return render_template("405_error.html"), 405
 
 
 # 500 'internal server error' error handler
+### credits #9 (see README.md credits section) ###
 @app.errorhandler(500)
 def page_not_found(e):
     return render_template("500_error.html"), 500

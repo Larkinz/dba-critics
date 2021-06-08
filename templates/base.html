@@ -24,12 +24,14 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="{{ url_for('homepage') }}" class="brand-logo">
+                        <!-- credits #13 (see README.md credits section) -->
                         <img width="200px" class="responsive-img" src="{{ url_for('static', filename='img/dbac-logo-transparent.png') }}">
                     </a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
                         <i class="material-icons">menu</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
+                        <!-- credits #2 (see README.md credits section) -->
                         {%- if request.path == url_for('homepage') %}
                             <li class="waves-effect waves-custom"><a href="#home">Home</a></li>
                             <li class="waves-effect waves-custom"><a href="#band">Band</a></li>
@@ -57,8 +59,10 @@
     <!-- mobile sidenav -->
     <ul class="sidenav sidenav-close" id="mobile-demo">
         <div class="sidenav-logo-container">
+            <!-- credits #13 (see README.md credits section) -->
             <img class="sidenav-logo" src="{{ url_for('static', filename='img/dbac-logo-transparent.png') }}">
         </div>
+        <!-- credits #2 (see README.md credits section) -->
         {%- if request.path == url_for('homepage') %}
             <li class="waves-effect waves-custom"><a href="#home">Home</a></li>
             <li class="waves-effect waves-custom"><a href="#band">Band</a></li>
