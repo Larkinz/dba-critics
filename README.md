@@ -286,13 +286,109 @@ A separate file with testing information can be found [here](file-location-place
 
 ## Deployment
 
+### Set up database
+
+To deploy this project yourself you will need to set up a database with the following steps:
+
+1. Sign up to [MongoDB](https://account.mongodb.com/account/register).
+2. Select the option to create a free cluster.
+3. Choose a cloud provider, region, and a cluster name.
+4. Click **connect**.
+
+![MongoDB cluster](docs/mongodb-cluster.png)
+
+6. Add your IP address to the whitelist.
+7. Create a database username and password.
+8. Click **choose a connection method**.
+9. Select **connect your application**.
+10. Select the correct driver (Python) and version.
+11. Copy the connection string (you will need this MONGO_URI later), and follow the instructions to replace the password and database name.
+12. Go back to your cluster and click **collections**.
+13. Choose a database name.
+14. Re-create my **users**, **ratings**, and **comments** collections according to my [**database schema**](#database-schema).
+
 ### Hosting online
 
-placeholder text
+This project was hosted on [Heroku](https://dashboard.heroku.com/) with the following steps:
+
+1. First of all you need to clone my repo and add it to your own Github acount.
+2. Log into [Heroku](https://id.heroku.com/login).
+3. Select **new** and **create new app**.
+
+![Heroku new](docs/heroku-new.png)
+
+4. Choose a unique app name and select a region.
+5. Click **connect to github**.
+6. Enter your repo name and click search.
+7. Click **connect**.
+8. Scroll up and click on the **settings** tab.
+
+![Heroku settings](docs/heroku-settings.png)
+
+9. Click **reveal config vars**.
+10. Add the correct environment variables.
+
+![environment variables](docs/environment-variables.png)
+
+11. In your repo folder create an **env.py** file.
+12. In the env.py file copy and paste the following code, and make sure to match the config vars values that you entered in Heroku earlier:
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "enter your database name here")
+os.environ.setdefault("MONGO_URI", "enter your MONGO_URI here")
+os.environ.setdefault("MONGO_DBNAME", "enter your secret key here")
+
+```
+
+13. Add both `env.py and __pycache__/` to a .gitignore file (both on separate lines).
+
+![git ignore](docs/git-ignore.png)
+
+14. In your terminal enter the following command: `pip3 install Flask`
+15. Commit these changes to Github.
+16. Go back to the Heroku website, scroll up and click the **deploy** tab.
+
+![Heroku deploy](docs/heroku-deploy.png)
+
+17. In the deploy tab, scroll down and click **enable automatic deploys**
+18. At the **deploy a github branch** select the main/master branch and click **deploy branch**.
+19. Heroku will now receive the code from your GitHub repo, and start building the app using the required packages. This could take a couple minutes, once it's done, you'll also see "Your app was successfully deployed."
+20. Click **view** to launch your new app.
+21. The deployed site is now available, and should automatically update whenever you push changes to the Github repo.
 
 ### Running locally
 
-placeholder text
+To run my project locally I'd suggest the following steps:
+
+1. First of all, set up a database in MongoDB as described earlier in this section of the readme.
+2. Download and install the appropriate versions of Python, Visual Studio Code, and GIT for your computer.
+3. Download the repo from my Github and extract it in a folder on your computer.
+4. Open this folder in Visual Studio Code.
+5. In your terminal, make sure you are in the root directory and enter the following command: `pip3 install -r requirements.txt`
+6. In your project folder create an **env.py** file.
+7. In the env.py file copy and paste the following code, and make sure to enter your own secret key, MONGO_URI, and database name:
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "enter your database name here")
+os.environ.setdefault("MONGO_URI", "enter your MONGO_URI here")
+os.environ.setdefault("MONGO_DBNAME", "enter your secret key here")
+
+```
+
+8. If you plan to push this project to your own Github, make sure to add both `env.py and __pycache__/` to a .gitignore file (both on separate lines).
+
+![git ignore](docs/git-ignore.png)
+
+9. To run the application locally, in your terminal enter the following command: `py app.py`
+10. To visit the website, enter the following URL in a browser of your choice: `http://localhost:5000/`
 
 **_[Back to top](#contents)_**
 
