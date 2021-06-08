@@ -48,6 +48,7 @@ This website was made as my third milestone project for the Code Institute cours
 
 - [**Deployment**](#deployment)
 
+  - Set up database
   - Hosting online
   - Running locally
 
@@ -348,17 +349,16 @@ os.environ.setdefault("MONGO_DBNAME", "enter your secret key here")
 
 ![git ignore](docs/git-ignore.png)
 
-14. In your terminal enter the following command: `pip3 install Flask`
-15. Commit these changes to Github.
-16. Go back to the Heroku website, scroll up and click the **deploy** tab.
+14. Commit these changes to Github.
+15. Go back to the Heroku website, scroll up and click the **deploy** tab.
 
 ![Heroku deploy](docs/heroku-deploy.png)
 
-17. In the deploy tab, scroll down and click **enable automatic deploys**
-18. At the **deploy a github branch** select the main/master branch and click **deploy branch**.
-19. Heroku will now receive the code from your GitHub repo, and start building the app using the required packages. This could take a couple minutes, once it's done, you'll also see "Your app was successfully deployed."
-20. Click **view** to launch your new app.
-21. The deployed site is now available, and should automatically update whenever you push changes to the Github repo.
+16. In the deploy tab, scroll down and click **enable automatic deploys**
+17. At the **deploy a github branch** select the main/master branch and click **deploy branch**.
+18. Heroku will now receive the code from your GitHub repo, and start building the app using the required packages. This could take a couple minutes, once it's done, you'll also see "Your app was successfully deployed."
+19. Click **view** to launch your new app.
+20. The deployed site is now available, and should automatically update whenever you push changes to the Github repo.
 
 ### Running locally
 
