@@ -39,67 +39,118 @@ def homepage():
 @app.route("/albums")
 def albums():
     # grab all comments from the database
-    comments = list(mongo.db.comments.find())
+    try:
+        comments = list(mongo.db.comments.find())
+    except:
+        comments = []
 
     # count the total amount of votes on album 001
     album001_vote_count = 0
-    for x in mongo.db.ratings.find({"album_id": "001"}):
-        album001_vote_count = album001_vote_count + 1
+    try:
+        for x in mongo.db.ratings.find({"album_id": "001"}):
+            album001_vote_count = album001_vote_count + 1
+    except:
+        album001_vote_count = 0
 
     # count the total amount of votes on album 002
     album002_vote_count = 0
-    for x in mongo.db.ratings.find({"album_id": "002"}):
-        album002_vote_count = album002_vote_count + 1
+    try:
+        for x in mongo.db.ratings.find({"album_id": "002"}):
+            album002_vote_count = album002_vote_count + 1
+    except:
+        album002_vote_count = 0
 
     # count the total amount of votes on album 003
     album003_vote_count = 0
-    for x in mongo.db.ratings.find({"album_id": "003"}):
-        album003_vote_count = album003_vote_count + 1
+    try:
+        for x in mongo.db.ratings.find({"album_id": "003"}):
+            album003_vote_count = album003_vote_count + 1
+    except:
+        album003_vote_count = 0
 
     # count the total amount of votes on album 004
     album004_vote_count = 0
-    for x in mongo.db.ratings.find({"album_id": "004"}):
-        album004_vote_count = album004_vote_count + 1
+    try:
+        for x in mongo.db.ratings.find({"album_id": "004"}):
+            album004_vote_count = album004_vote_count + 1
+    except:
+        album004_vote_count = 0
 
     # find all album 001 ratings
-    album001_ratings = list(mongo.db.ratings.find({"album_id": "001"}))
+    try:
+        album001_ratings = list(mongo.db.ratings.find({"album_id": "001"}))
+    except:
+        album001_ratings = []
 
     # sum up all the album 001 ratings
     ### credits #7 (see README.md credits section) ###
-    album001_rating_sum = sum(int(d["rating"]) for d in album001_ratings)
+    try:
+        album001_rating_sum = sum(int(d["rating"]) for d in album001_ratings)
+    except:
+        album001_rating_sum = 0
 
     # calculate average album 001 rating
-    album001_avg_rating = round(album001_rating_sum / album001_vote_count)
+    try:
+        album001_avg_rating = round(album001_rating_sum / album001_vote_count)
+    except:
+        album001_avg_rating = 0
 
     # find all album 002 ratings
-    album002_ratings = list(mongo.db.ratings.find({"album_id": "002"}))
+    try:
+        album002_ratings = list(mongo.db.ratings.find({"album_id": "002"}))
+    except:
+        album002_ratings = []
 
     # sum up all the album 002 ratings
     ### credits #7 (see README.md credits section) ###
-    album002_rating_sum = sum(int(d["rating"]) for d in album002_ratings)
+    try:
+        album002_rating_sum = sum(int(d["rating"]) for d in album002_ratings)
+    except:
+        album002_rating_sum = 0
 
     # calculate average album 002 rating
-    album002_avg_rating = round(album002_rating_sum / album002_vote_count)
+    try:
+        album002_avg_rating = round(album002_rating_sum / album002_vote_count)
+    except:
+        album002_avg_rating = 0
 
     # find all album 003 ratings
-    album003_ratings = list(mongo.db.ratings.find({"album_id": "003"}))
+    try:
+        album003_ratings = list(mongo.db.ratings.find({"album_id": "003"}))
+    except:
+        album003_ratings = []
 
     # sum up all the album 003 ratings
     ### credits #7 (see README.md credits section) ###
-    album003_rating_sum = sum(int(d["rating"]) for d in album003_ratings)
+    try:
+        album003_rating_sum = sum(int(d["rating"]) for d in album003_ratings)
+    except:
+        album003_rating_sum = 0
 
     # calculate average album 003 rating
-    album003_avg_rating = round(album003_rating_sum / album003_vote_count)
+    try:
+        album003_avg_rating = round(album003_rating_sum / album003_vote_count)
+    except:
+        album003_avg_rating = 0
 
     # find all album 004 ratings
-    album004_ratings = list(mongo.db.ratings.find({"album_id": "004"}))
+    try:
+        album004_ratings = list(mongo.db.ratings.find({"album_id": "004"}))
+    except:
+        album004_ratings = []
 
     # sum up all the album 004 ratings
     ### credits #7 (see README.md credits section) ###
-    album004_rating_sum = sum(int(d["rating"]) for d in album004_ratings)
+    try:
+        album004_rating_sum = sum(int(d["rating"]) for d in album004_ratings)
+    except:
+        album004_rating_sum = 0
 
     # calculate average album 004 rating
-    album004_avg_rating = round(album004_rating_sum / album004_vote_count)
+    try:
+        album004_avg_rating = round(album004_rating_sum / album004_vote_count)
+    except:
+        album004_avg_rating = 0
 
     # check if user has voted on album 001
     has_voted_album001 = "false"
@@ -181,7 +232,8 @@ def edit_comment(comment_id, album_id):
                 "album_id": f"{album_id}",
                 "username": session["user"]
             }
-            mongo.db.comments.update(
+            # update comment
+            mongo.db.comments.replace_one(
                 {"_id": ObjectId(comment_id)}, comment_edit)
             return redirect(url_for('albums'))
         except:
@@ -193,7 +245,7 @@ def edit_comment(comment_id, album_id):
 @app.route("/delete_comment/<comment_id>")
 def delete_comment(comment_id):
     try:
-        mongo.db.comments.remove({"_id": ObjectId(comment_id)})
+        mongo.db.comments.delete_one({"_id": ObjectId(comment_id)})
         return redirect(url_for('albums'))
     except:
         return render_template("500_error.html")
@@ -216,7 +268,7 @@ def post_rating(album_id):
                     "album_id": f"{album_id}",
                     "username": session["user"]
                 }
-                mongo.db.ratings.update(
+                mongo.db.ratings.replace_one(
                     {"_id": existing_rating.get('_id')}, rating_edit)
                 flash("You updated your rating!")
                 return redirect(url_for('albums'))
