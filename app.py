@@ -58,19 +58,12 @@ def albums():
 
     # count the total amount of votes on album 001
     album001_vote_count = vote_count("001")
-    print(album001_vote_count)
-
     # count the total amount of votes on album 002
     album002_vote_count = vote_count("002")
-    print(album002_vote_count)
-
     # count the total amount of votes on album 003
     album003_vote_count = vote_count("003")
-    print(album003_vote_count)
-
     # count the total amount of votes on album 004
     album004_vote_count = vote_count("004")
-    print(album004_vote_count)
 
     # find all album 001 ratings
     try:
