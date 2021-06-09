@@ -77,21 +77,42 @@ def calc_album_avg_rating(album_rating_sum, album_vote_count):
 
 @app.route("/")
 def starting_url():
+    """
+    Redirects to the welcome page,
+    no logic is executed.
+    """
     return redirect("/welcome")
 
 
 @app.route("/welcome")
 def welcome():
+    """
+    Returns the welcome page template,
+    no logic is executed.
+    """
     return render_template("welcome.html")
 
 
 @app.route("/homepage")
 def homepage():
+    """
+    Returns the homepage template,
+    no logic is executed.
+    """
     return render_template("homepage.html")
 
 
 @app.route("/albums")
 def albums():
+    """
+    Grabs every comment from the database,
+    counts the total amount of votes per album_id,
+    finds all the album ratings per album_id,
+    sums up all the album ratings per album_id,
+    calculates the average album rating per album_id,
+    checks on what albums the user has voted,
+    then returns the albums page template.
+    """
     # grab all comments from the database
     try:
         comments = list(mongo.db.comments.find())
@@ -198,6 +219,11 @@ def albums():
 ### credits #8 (see README.md credits section) ###
 @app.route("/<album_id>", methods=["POST"])
 def post_comment(album_id):
+    """
+    Receives user input from HTML form,
+    inserts the input into the database,
+    then redirects to the albums page.
+    """
     if request.method == "POST":
         try:
             comment = {
@@ -215,6 +241,11 @@ def post_comment(album_id):
 ### credits #8 (see README.md credits section) ###
 @app.route("/edit_comment/<comment_id>/<album_id>", methods=["POST"])
 def edit_comment(comment_id, album_id):
+    """
+    Receives user input from HTML form,
+    updates the database item,
+    then redirects to the albums page.
+    """
     if request.method == "POST":
         try:
             comment_edit = {
@@ -234,6 +265,10 @@ def edit_comment(comment_id, album_id):
 ### credits #8 (see README.md credits section) ###
 @app.route("/delete_comment/<comment_id>")
 def delete_comment(comment_id):
+    """
+    Deletes the database item,
+    then redirects to the albums page.
+    """
     try:
         mongo.db.comments.delete_one({"_id": ObjectId(comment_id)})
         return redirect(url_for('albums'))
@@ -245,6 +280,13 @@ def delete_comment(comment_id):
 ### credits #8 (see README.md credits section) ###
 @app.route("/post_rating/<album_id>", methods=["POST"])
 def post_rating(album_id):
+    """
+    Receives user input from HTML form,
+    checks the database if the user already voted,
+    if the user already voted it updates their vote,
+    else if they haven't voted it inserts their vote,
+    then redirects to the albums page.
+    """
     if request.method == "POST":
         try:
             # check if user album rating already exists in database
@@ -280,6 +322,22 @@ def post_rating(album_id):
 ### credits #8 (see README.md credits section) ###
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    If the method is POST,
+    user input is received from HTML form,
+    it checks the database if the user exists,
+    if the user exists it checks if the password matches,
+    if the password matches it puts the user into session,
+    then redirects to the albums page.
+    If the password doesn't match,
+    then it redirects back to the login page.
+
+    Else if the user doesn't exist,
+    it redirects back to the login page.
+
+    If the method is GET,
+    it returns the login page template.
+    """
     if request.method == "POST":
         # check if username exists in database
         existing_user = mongo.db.users.find_one(
@@ -309,6 +367,20 @@ def login():
 ### credits #8 (see README.md credits section) ###
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    If the method is POST,
+    user input is received from HTML form,
+    it checks the database if the user exists,
+    if the user exists,
+    it redirects back to the register page.
+
+    Else if the user doesn't exist,
+    it inserts their username and password into the database,
+    then it redirects to the login page.
+
+    If the method is GET,
+    it returns the register page template.
+    """
     if request.method == "POST":
         # check if username already exists in database
         existing_user = mongo.db.users.find_one(
@@ -333,6 +405,10 @@ def register():
 ### credits #8 (see README.md credits section) ###
 @app.route("/logout")
 def logout():
+    """
+    Removes the user from session,
+    then redirects to the login page.
+    """
     # remove user from session cookie
     flash("You have been logged out")
     session.pop("user")
@@ -343,6 +419,10 @@ def logout():
 ### credits #9 (see README.md credits section) ###
 @app.errorhandler(404)
 def page_not_found(e):
+    """
+    Catches and handles a 404 error,
+    by returning the 404 error page template.
+    """
     return render_template("404_error.html"), 404
 
 
@@ -350,6 +430,10 @@ def page_not_found(e):
 ### credits #9 (see README.md credits section) ###
 @app.errorhandler(405)
 def page_not_found(e):
+    """
+    Catches and handles a 405 error,
+    by returning the 405 error page template.
+    """
     return render_template("405_error.html"), 405
 
 
@@ -357,6 +441,10 @@ def page_not_found(e):
 ### credits #9 (see README.md credits section) ###
 @app.errorhandler(500)
 def page_not_found(e):
+    """
+    Catches and handles a 500 error,
+    by returning the 500 error page template.
+    """
     return render_template("500_error.html"), 500
 
 
