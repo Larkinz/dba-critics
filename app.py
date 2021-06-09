@@ -149,19 +149,15 @@ def albums():
     # calculate average album 001 rating
     album001_avg_rating = calc_album_avg_rating(
         album001_rating_sum, album001_vote_count)
-    print(album001_avg_rating)
     # calculate average album 002 rating
     album002_avg_rating = calc_album_avg_rating(
         album002_rating_sum, album002_vote_count)
-    print(album002_avg_rating)
     # calculate average album 003 rating
     album003_avg_rating = calc_album_avg_rating(
         album003_rating_sum, album003_vote_count)
-    print(album003_avg_rating)
     # calculate average album 004 rating
     album004_avg_rating = calc_album_avg_rating(
         album004_rating_sum, album004_vote_count)
-    print(album004_avg_rating)
 
     # check if user has voted on album 001
     has_voted_album001 = "false"
