@@ -21,6 +21,18 @@ app.secret_key = os.environ.get("SECRET_KEY")  # grab the secret key
 mongo = PyMongo(app)
 
 
+def vote_count(album_id):
+    """Check the database for votes that match a certain album id,
+    then return the total number of votes for that specific album id."""
+    album_vote_count = 0
+    try:
+        for x in mongo.db.ratings.find({"album_id": album_id}):
+            album_vote_count = album_vote_count + 1
+    except:
+        album_vote_count = 0
+    return album_vote_count
+
+
 @app.route("/")
 def starting_url():
     return redirect("/welcome")
@@ -45,36 +57,20 @@ def albums():
         comments = []
 
     # count the total amount of votes on album 001
-    album001_vote_count = 0
-    try:
-        for x in mongo.db.ratings.find({"album_id": "001"}):
-            album001_vote_count = album001_vote_count + 1
-    except:
-        album001_vote_count = 0
+    album001_vote_count = vote_count("001")
+    print(album001_vote_count)
 
     # count the total amount of votes on album 002
-    album002_vote_count = 0
-    try:
-        for x in mongo.db.ratings.find({"album_id": "002"}):
-            album002_vote_count = album002_vote_count + 1
-    except:
-        album002_vote_count = 0
+    album002_vote_count = vote_count("002")
+    print(album002_vote_count)
 
     # count the total amount of votes on album 003
-    album003_vote_count = 0
-    try:
-        for x in mongo.db.ratings.find({"album_id": "003"}):
-            album003_vote_count = album003_vote_count + 1
-    except:
-        album003_vote_count = 0
+    album003_vote_count = vote_count("003")
+    print(album003_vote_count)
 
     # count the total amount of votes on album 004
-    album004_vote_count = 0
-    try:
-        for x in mongo.db.ratings.find({"album_id": "004"}):
-            album004_vote_count = album004_vote_count + 1
-    except:
-        album004_vote_count = 0
+    album004_vote_count = vote_count("004")
+    print(album004_vote_count)
 
     # find all album 001 ratings
     try:
