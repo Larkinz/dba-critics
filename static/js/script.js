@@ -1,3 +1,20 @@
+// enable strict mode
+'use strict';
+
+// album rating range type input slider element selectors
+const RANGE_INPUT_ALBUM_001 = document.querySelector("#slider-album-001");
+let rangeOutputAlbum001 = document.querySelector("#your-album-001-rating");
+let album001SubmitBtn = document.querySelector("#album-001-submit-btn");
+const RANGE_INPUT_ALBUM_002 = document.querySelector("#slider-album-002");
+let rangeOutputAlbum002 = document.querySelector("#your-album-002-rating");
+let album002SubmitBtn = document.querySelector("#album-002-submit-btn");
+const RANGE_INPUT_ALBUM_003 = document.querySelector("#slider-album-003");
+let rangeOutputAlbum003 = document.querySelector("#your-album-003-rating");
+let album003SubmitBtn = document.querySelector("#album-003-submit-btn");
+const RANGE_INPUT_ALBUM_004 = document.querySelector("#slider-album-004");
+let rangeOutputAlbum004 = document.querySelector("#your-album-004-rating");
+let album004SubmitBtn = document.querySelector("#album-004-submit-btn");
+
 document.addEventListener("DOMContentLoaded", function () {
     // initialize materialize sidenav
     const SIDENAV = document.querySelectorAll(".sidenav");
@@ -29,10 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // album 001 range input slider functionality
 /* credits #5 (see README.md credits section) */
-const RANGE_INPUT_ALBUM_001 = document.getElementById("slider-album-001");
-let rangeOutputAlbum001 = document.getElementById("your-album-001-rating");
-let album001SubmitBtn = document.getElementById('album-001-submit-btn');
-
 RANGE_INPUT_ALBUM_001.oninput = function () {
     rangeOutputAlbum001.innerHTML = this.value;
     /* credits #6 (see README.md credits section) */
@@ -41,10 +54,6 @@ RANGE_INPUT_ALBUM_001.oninput = function () {
 
 // album 002 range input slider functionality
 /* credits #5 (see README.md credits section) */
-const RANGE_INPUT_ALBUM_002 = document.getElementById("slider-album-002");
-let rangeOutputAlbum002 = document.getElementById("your-album-002-rating");
-let album002SubmitBtn = document.getElementById('album-002-submit-btn');
-
 RANGE_INPUT_ALBUM_002.oninput = function () {
     rangeOutputAlbum002.innerHTML = this.value;
     /* credits #6 (see README.md credits section) */
@@ -53,10 +62,6 @@ RANGE_INPUT_ALBUM_002.oninput = function () {
 
 // album 003 range input slider functionality
 /* credits #5 (see README.md credits section) */
-const RANGE_INPUT_ALBUM_003 = document.getElementById("slider-album-003");
-let rangeOutputAlbum003 = document.getElementById("your-album-003-rating");
-let album003SubmitBtn = document.getElementById('album-003-submit-btn');
-
 RANGE_INPUT_ALBUM_003.oninput = function () {
     rangeOutputAlbum003.innerHTML = this.value;
     /* credits #6 (see README.md credits section) */
@@ -65,10 +70,6 @@ RANGE_INPUT_ALBUM_003.oninput = function () {
 
 // album 004 range input slider functionality
 /* credits #5 (see README.md credits section) */
-const RANGE_INPUT_ALBUM_004 = document.getElementById("slider-album-004");
-let rangeOutputAlbum004 = document.getElementById("your-album-004-rating");
-let album004SubmitBtn = document.getElementById('album-004-submit-btn');
-
 RANGE_INPUT_ALBUM_004.oninput = function () {
     rangeOutputAlbum004.innerHTML = this.value;
     /* credits #6 (see README.md credits section) */
