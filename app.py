@@ -22,8 +22,10 @@ mongo = PyMongo(app)
 
 
 def vote_count(album_id):
-    """Check the database for votes that match a certain album id,
-    then return the total number of votes for that specific album id."""
+    """
+    Check the database for votes that match a certain album id,
+    then return the total number of votes for that specific album id.
+    """
     album_vote_count = 0
     try:
         for x in mongo.db.ratings.find({"album_id": album_id}):
@@ -31,6 +33,19 @@ def vote_count(album_id):
     except:
         album_vote_count = 0
     return album_vote_count
+
+
+def find_album_ratings(album_id):
+    """
+    Check the database for votes that match a certain album id,
+    then return these as a list of dictionaries.
+    """
+    album_ratings = []
+    try:
+        album_ratings = list(mongo.db.ratings.find({"album_id": album_id}))
+    except:
+        album_ratings = []
+    return album_ratings
 
 
 @app.route("/")
@@ -66,10 +81,13 @@ def albums():
     album004_vote_count = vote_count("004")
 
     # find all album 001 ratings
-    try:
-        album001_ratings = list(mongo.db.ratings.find({"album_id": "001"}))
-    except:
-        album001_ratings = []
+    album001_ratings = find_album_ratings("001")
+    # find all album 002 ratings
+    album002_ratings = find_album_ratings("002")
+    # find all album 003 ratings
+    album003_ratings = find_album_ratings("003")
+    # find all album 004 ratings
+    album004_ratings = find_album_ratings("004")
 
     # sum up all the album 001 ratings
     ### credits #7 (see README.md credits section) ###
@@ -84,12 +102,6 @@ def albums():
     except:
         album001_avg_rating = 0
 
-    # find all album 002 ratings
-    try:
-        album002_ratings = list(mongo.db.ratings.find({"album_id": "002"}))
-    except:
-        album002_ratings = []
-
     # sum up all the album 002 ratings
     ### credits #7 (see README.md credits section) ###
     try:
@@ -103,12 +115,6 @@ def albums():
     except:
         album002_avg_rating = 0
 
-    # find all album 003 ratings
-    try:
-        album003_ratings = list(mongo.db.ratings.find({"album_id": "003"}))
-    except:
-        album003_ratings = []
-
     # sum up all the album 003 ratings
     ### credits #7 (see README.md credits section) ###
     try:
@@ -121,12 +127,6 @@ def albums():
         album003_avg_rating = round(album003_rating_sum / album003_vote_count)
     except:
         album003_avg_rating = 0
-
-    # find all album 004 ratings
-    try:
-        album004_ratings = list(mongo.db.ratings.find({"album_id": "004"}))
-    except:
-        album004_ratings = []
 
     # sum up all the album 004 ratings
     ### credits #7 (see README.md credits section) ###
