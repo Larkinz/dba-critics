@@ -48,6 +48,20 @@ def find_album_ratings(album_id):
     return album_ratings
 
 
+def sum_album_ratings(album_ratings):
+    """
+    Sum up all the rating key values from a list of dictionaries,
+    then return the result.
+    """
+    album_rating_sum = 0
+    ### credits #7 (see README.md credits section) ###
+    try:
+        album_rating_sum = sum(int(d["rating"]) for d in album_ratings)
+    except:
+        album_rating_sum = 0
+    return album_rating_sum
+
+
 @app.route("/")
 def starting_url():
     return redirect("/welcome")
@@ -90,11 +104,13 @@ def albums():
     album004_ratings = find_album_ratings("004")
 
     # sum up all the album 001 ratings
-    ### credits #7 (see README.md credits section) ###
-    try:
-        album001_rating_sum = sum(int(d["rating"]) for d in album001_ratings)
-    except:
-        album001_rating_sum = 0
+    album001_rating_sum = sum_album_ratings(album001_ratings)
+    # sum up all the album 002 ratings
+    album002_rating_sum = sum_album_ratings(album002_ratings)
+    # sum up all the album 003 ratings
+    album003_rating_sum = sum_album_ratings(album003_ratings)
+    # sum up all the album 004 ratings
+    album004_rating_sum = sum_album_ratings(album004_ratings)
 
     # calculate average album 001 rating
     try:
@@ -102,38 +118,17 @@ def albums():
     except:
         album001_avg_rating = 0
 
-    # sum up all the album 002 ratings
-    ### credits #7 (see README.md credits section) ###
-    try:
-        album002_rating_sum = sum(int(d["rating"]) for d in album002_ratings)
-    except:
-        album002_rating_sum = 0
-
     # calculate average album 002 rating
     try:
         album002_avg_rating = round(album002_rating_sum / album002_vote_count)
     except:
         album002_avg_rating = 0
 
-    # sum up all the album 003 ratings
-    ### credits #7 (see README.md credits section) ###
-    try:
-        album003_rating_sum = sum(int(d["rating"]) for d in album003_ratings)
-    except:
-        album003_rating_sum = 0
-
     # calculate average album 003 rating
     try:
         album003_avg_rating = round(album003_rating_sum / album003_vote_count)
     except:
         album003_avg_rating = 0
-
-    # sum up all the album 004 ratings
-    ### credits #7 (see README.md credits section) ###
-    try:
-        album004_rating_sum = sum(int(d["rating"]) for d in album004_ratings)
-    except:
-        album004_rating_sum = 0
 
     # calculate average album 004 rating
     try:
