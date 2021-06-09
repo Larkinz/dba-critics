@@ -62,6 +62,19 @@ def sum_album_ratings(album_ratings):
     return album_rating_sum
 
 
+def calc_album_avg_rating(album_rating_sum, album_vote_count):
+    """
+    Calculate the average album rating,
+    then return the result.
+    """
+    album_avg_rating = 0
+    try:
+        album_avg_rating = round(album_rating_sum / album_vote_count)
+    except:
+        album_avg_rating = 0
+    return album_avg_rating
+
+
 @app.route("/")
 def starting_url():
     return redirect("/welcome")
@@ -113,28 +126,21 @@ def albums():
     album004_rating_sum = sum_album_ratings(album004_ratings)
 
     # calculate average album 001 rating
-    try:
-        album001_avg_rating = round(album001_rating_sum / album001_vote_count)
-    except:
-        album001_avg_rating = 0
-
+    album001_avg_rating = calc_album_avg_rating(
+        album001_rating_sum, album001_vote_count)
+    print(album001_avg_rating)
     # calculate average album 002 rating
-    try:
-        album002_avg_rating = round(album002_rating_sum / album002_vote_count)
-    except:
-        album002_avg_rating = 0
-
+    album002_avg_rating = calc_album_avg_rating(
+        album002_rating_sum, album002_vote_count)
+    print(album002_avg_rating)
     # calculate average album 003 rating
-    try:
-        album003_avg_rating = round(album003_rating_sum / album003_vote_count)
-    except:
-        album003_avg_rating = 0
-
+    album003_avg_rating = calc_album_avg_rating(
+        album003_rating_sum, album003_vote_count)
+    print(album003_avg_rating)
     # calculate average album 004 rating
-    try:
-        album004_avg_rating = round(album004_rating_sum / album004_vote_count)
-    except:
-        album004_avg_rating = 0
+    album004_avg_rating = calc_album_avg_rating(
+        album004_rating_sum, album004_vote_count)
+    print(album004_avg_rating)
 
     # check if user has voted on album 001
     has_voted_album001 = "false"
