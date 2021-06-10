@@ -162,7 +162,8 @@ def albums():
     # check if user has voted on album 001
     has_voted_album001 = "false"
     try:
-        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]}, {"album_id": "001"}]}):
+        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]},
+                                               {"album_id": "001"}]}):
             has_voted_album001 = "true"
     except:
         has_voted_album001 = "false"
@@ -170,7 +171,8 @@ def albums():
     # check if user has voted on album 002
     has_voted_album002 = "false"
     try:
-        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]}, {"album_id": "002"}]}):
+        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]},
+                                               {"album_id": "002"}]}):
             has_voted_album002 = "true"
     except:
         has_voted_album002 = "false"
@@ -178,7 +180,8 @@ def albums():
     # check if user has voted on album 003
     has_voted_album003 = "false"
     try:
-        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]}, {"album_id": "003"}]}):
+        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]},
+                                               {"album_id": "003"}]}):
             has_voted_album003 = "true"
     except:
         has_voted_album003 = "false"
@@ -186,7 +189,8 @@ def albums():
     # check if user has voted on album 004
     has_voted_album004 = "false"
     try:
-        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]}, {"album_id": "004"}]}):
+        if mongo.db.ratings.find_one({"$and": [{"username": session["user"]},
+                                               {"album_id": "004"}]}):
             has_voted_album004 = "true"
     except:
         has_voted_album004 = "false"
@@ -287,7 +291,8 @@ def post_rating(album_id):
         try:
             # check if user album rating already exists in database
             existing_rating = mongo.db.ratings.find_one(
-                {"$and": [{"username": session["user"]}, {"album_id": album_id}]})
+                {"$and": [{"username": session["user"]},
+                          {"album_id": album_id}]})
 
             # update album rating
             if existing_rating:
@@ -388,7 +393,8 @@ def register():
 
         register = {
             "username": request.form.get("username"),
-            "password": generate_password_hash(request.form.get("password"), method='pbkdf2:sha512')
+            "password": generate_password_hash(request.form.get("password"),
+                                               method='pbkdf2:sha512')
         }
         mongo.db.users.insert_one(register)
         flash("Registration complete!")
