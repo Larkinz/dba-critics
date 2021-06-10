@@ -28,9 +28,9 @@
                 <div class="nav-wrapper">
                     <a href="{{ url_for('homepage') }}" class="brand-logo">
                         <!-- credits #13 (see README.md credits section) -->
-                        <img class="responsive-img" src="{{ url_for('static', filename='img/dbac-logo-transparent.png') }}">
+                        <img class="responsive-img" src="{{ url_for('static', filename='img/dbac-logo-transparent.png') }}" alt="DBA critics logo">
                     </a>
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right" aria-label="hamburger menu nagivation button" role="navigation">
                         <i class="material-icons">menu</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
@@ -63,7 +63,7 @@
     <ul class="sidenav sidenav-close" id="mobile-demo">
         <div class="sidenav-logo-container flex-center">
             <!-- credits #13 (see README.md credits section) -->
-            <img class="sidenav-logo" src="{{ url_for('static', filename='img/dbac-logo-transparent.png') }}">
+            <img class="sidenav-logo" src="{{ url_for('static', filename='img/dbac-logo-transparent.png') }}" alt="DBA critics logo">
         </div>
         <!-- credits #2 (see README.md credits section) -->
         {%- if request.path == url_for('homepage') %}
@@ -94,10 +94,10 @@
         <div class="container center">
             <div>Dead By April</div>
             <div>
-                <a href="https://www.youtube.com/user/deadbyaprilofficial/videos" target="_blank"><i class="fab fa-youtube-square"></i></a>
-                <a href="https://www.facebook.com/deadbyapril" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                <a href="https://twitter.com/dbaswe" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                <a href="https://www.instagram.com/deadbyapril_official/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.youtube.com/user/deadbyaprilofficial/videos" target="_blank" rel=”noopener”><i class="fab fa-youtube-square"></i></a>
+                <a href="https://www.facebook.com/deadbyapril" target="_blank" rel=”noopener”><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/dbaswe" target="_blank" rel=”noopener”><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/deadbyapril_official/" target="_blank" rel=”noopener”><i class="fab fa-instagram-square"></i></a>
             </div>
         </div>
     </footer>
