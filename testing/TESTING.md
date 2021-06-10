@@ -85,7 +85,7 @@ Everything is working and displaying as intended. [(screenshot)](testing-img/fir
 
 **Microsoft Edge Version 91.0.864.41 (Official build) (64-bit):**
 
-Everything is working and displaying as intended. [(screenshot)](testing-img/opera.png)
+Everything is working and displaying as intended. [(screenshot)](testing-img/edge.png)
 
 **iOS:**
 
@@ -109,7 +109,7 @@ Everything is working and displaying as intended. [(screenshot)](testing-img/bra
 
 ## Mobile responsiveness
 
-placeholder text
+I've applied completely custom media queries throughout the website to achieve mobile responsiveness. To test the website for mobile responsiveness I've been using the Google Chrome devtools throughout the coding of the media queries. I manually used the sliders to adjust for different screen sizes, and I've also used all of the [pre-configured screen sizes](testing-img/devtools-phones.png) in the devtools to test if things looked okay, both in vertical and horizontal directions. Since the early stages of development I've also tested parts of the website on my Galaxy S7, this was possible because I deployed the website to Heroku at the beginning of the development process. Another thing I did was use [responsive design checker](https://responsivedesignchecker.com/) and [ami responsive design](http://ami.responsivedesign.is/) for some additional mobile responsiveness testing throughout the building of the website, since the Google Chrome devtools can behave a bit strange at times it's good to test responsiveness with more than a single tool.
 
 **_[Back to top](#contents)_**
 
