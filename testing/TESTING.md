@@ -131,23 +131,29 @@ In the Google Chrome devtools I have used the Lighthouse feature to check: perfo
 
 ### W3C - Markup Validation Service
 
-placeholder text
+I've put the HTML code through the [W3C markup validator](https://validator.w3.org/), and I only got Flask/Jinja related errors that should be ignored.
 
 ### W3C - CSS Validation Service
 
-placeholder text
+I've put my style.css file through the [W3C CSS validator](https://jigsaw.w3.org/css-validator/) and it [passed without errors](testing-img/css-validation.png) on the second try, after removing some unnecessary background styling.
 
 ### JSHint - JavaScript code quality checker
 
-placeholder text
+I've put my script.js file through the [JSHint validator](https://jshint.com/) and it gave some warnings about missing a few semicolons. After adding those, I only got 1 ignorable warning about use strict, and 5 ignorable warnings related to some Materialize code.
+
+![JavaScript validator warnings](testing-img/js-validation.png)
 
 ### Python checker - Python code syntax checker
 
-placeholder text
+I've checked my Python code syntax on the [extendsclass website](https://extendsclass.com/python-tester.html), and after removing the f-strings that gave errors (because I couldn't select my Python version and this checker is apparently not up to date with Python 3.6 or 3.9) I got no errors at all.
+
+![Python syntax checker](testing-img/python-validation1.png)
 
 ### PEP8 online - Python code style checker
 
-placeholder text
+I've checked my Python code style to fit the PEP8 guidelines on the [PEP8online website](http://pep8online.com/), and after pushing down some lines of code that were too long I was only left with ignorable warnings for using multiple hashtags in a comment. I chose to do this to make my credits stand out against regular comments.
+
+![Python PEP8 guidelines checker](testing-img/python-validation2.png)
 
 **_[Back to top](#contents)_**
 
