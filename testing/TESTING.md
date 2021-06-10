@@ -117,7 +117,11 @@ I've applied completely custom media queries throughout the website to achieve m
 
 ## Lighthouse
 
-placeholder text
+In the Google Chrome devtools I have used the Lighthouse feature to check: performance, accessibility, best practices and SEO indicators for my website. I recorded before and after scores of the desktop and mobile tests of both the homepage and albums page. Some test scores deviated between 1 and 6 points without making changes to the website, so take that into consideration. The images below this paragraph show the scores before making changes to my website, and the best scores that I've managed to achieve after making some recommended changes. I improved the performance score by: compressing and/or optimizing videos and images, adding SEO tags and a website description, and by adding aria labels and alt tags. During testing with Lighthouse is became obvious to me that using the Materialize framework and Flask with its Jinja templating caused a lot of errors or warnings resulting in lower scores, especially in accessibility.
+
+![Desktop results lighthouse](testing-img/lh-desktop.png)
+
+![Mobile results lighthouse](testing-img/lh-mobile.png)
 
 **_[Back to top](#contents)_**
 
