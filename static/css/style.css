@@ -311,8 +311,6 @@ nav ul li:hover {
   object-fit: cover;
   height: 100%;
   width: auto;
-  background-size: none;
-  background-position: none;
   border-radius: 50px;
   overflow: hidden;
 }
