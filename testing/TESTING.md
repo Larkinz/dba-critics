@@ -261,9 +261,9 @@ I've checked my Python code style to fit the PEP8 guidelines on the [PEP8online 
 
 ---
 
-11. Third parallax:
+18. Third parallax:
 
-    11.1 Under the blog section is a parallax image containing some Dead by April logo artwork.
+    18.1 Under the blog section is a parallax image containing some Dead by April logo artwork.
 
 ---
 
