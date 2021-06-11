@@ -457,11 +457,21 @@ Smaller screen sizes:
 
 ### Solved bugs
 
-placeholder text
+- There was a bug where comments without spaces would overflow the comment container, this was fixed by adding `overflow-wrap: break-word;` to the comment paragraph element.
+
+- There was a bug that made scrollspy/smooth scroll not work because of the Flask Jinja href anchor tag syntax `{{ url_for('.homepage', _anchor='blog') }}` , this was fixed by making [different list elements](testing-img/bugfix-001.png) be displayed when on the homepage.
+
+- There was an issue that made the anchor scroll not stop at the correct height because it didn't consider the top navbar height, this was fixed by adding `scroll-margin-top: 56px;` to each section element that had an anchor tag.
+
+- There was a bug where the welcome page content would be outside the video background, this was fixed by giving both the welcome page html and body elements a unique ID, and then setting their height to 100% and overflow to hidden.
+
+- There was an [error logged in the console](testing-img/js-bug-001.png) related to [this JavaScript code](testing-img/js-bug-002.png), this was fixed by putting [all these functions](testing-img/js-bug-003.png) into a `window.onload` function, and adding an if statement checking for `null`.
 
 ### Known bugs
 
-placeholder text
+- On both the register and log in pages the [footer is not displayed at the bottom of the screen](testing-img/footer-bug-001), I encountered the same issue in a previous project and fixed it. This time however, I couldn't get it to work because of Flask/Jinja extending the base.html that contains the footer and body elements.
+
+- On iOS versions 12 and 13 on the albums page the [rating submit button is only half visible](testing-img/just-another-one-of-those-apple-ios-bugs.png), but the functionality still works.
 
 **_[Back to top](#contents)_**
 
