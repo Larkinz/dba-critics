@@ -395,7 +395,59 @@ I've checked my Python code style to fit the PEP8 guidelines on the [PEP8online 
 
 ## Testing user stories
 
-placeholder text
+- As a visitor, I would like to see an overview of the upcoming tour, so that I know where and when the next concerts take place.
+
+Large screen sizes:
+
+1. After entering the website from the welcome page the visitor [will see a navigation link to the tour section](testing-img/tour-001.png) in the navigation bar.
+2. After clicking this link the [tour section](testing-img/tour-002.png) will be visible, where the dates, venues, locations, and external links to ticket sellers will be displayed.
+
+Smaller screen sizes:
+
+1. After entering the website from the welcome page the visitor [will see a hamburger menu icon](testing-img/tour-003.png) on the right side of the top bar.
+2. After clicking on this icon the mobile sidenav will be displayed, where [a navigation link to the tour section](testing-img/tour-004.png) is visible.
+3. After clicking this link the [tour section](testing-img/tour-005.png) will be visible, where the dates, venues, locations, and external links to ticket sellers will be displayed.
+
+---
+
+- As a visitor, I would like to rate albums, so that I can compare the ratings with other fans.
+
+All screen sizes:
+
+1. After [logging in](testing-img/ratings-001.png) the visitor will be redirected to the albums page.
+2. On the albums page, at the bottom of each album a [ratings container](testing-img/ratings-002.png) is displayed. The visitor can see: the average rating, the total number of votes, and their own rating (if any). Rating an album or updating your rating can be done by moving the slider (1 to 100) and pressing the submit button.
+
+---
+
+- As a visitor, I would like to discuss albums, so that I can share my thoughts with other fans.
+
+All screen sizes:
+
+1. After [logging in](testing-img/ratings-001.png) the visitor will be redirected to the albums page.
+2. On the albums page, each album container has a [comments header](testing-img/comments-001.png).
+3. After clicking on the comments header the [comments section](testing-img/comments-002.png) will be displayed. The visitor can communicate with other fans here by logging in and placing comments under each album.
+
+---
+
+- As a site owner, I would like our website to have an intuitive navigation system, so that visitors can easily find what they are looking for.
+
+Large screen sizes:
+
+1. On the welcome page an ["Enter site" button](testing-img/nav-001.png) is visible which links to the homepage.
+2. On all the other pages on the right side of the top bar there are [navigation links](testing-img/nav-002.png) visible that are relevant to the current page that the visitor is on.
+
+Smaller screen sizes:
+
+1. On the welcome page an ["Enter site" button](testing-img/nav-001.png) is visible which links to the homepage.
+2. On all the other pages the visitor [will see a hamburger menu icon](testing-img/tour-003.png) on the right side of the top bar.
+3. After clicking on this icon the [mobile sidenav](testing-img/nav-003.png) will be displayed, where navigation links are visible that are relevant to the current page that the visitor is on.
+
+---
+
+- As a site owner, I would like to prevent unique visitors from voting twice, so that album ratings can't easily be cheated.
+
+1. Each unique user account can only vote once on each album, voting twice will just [update their rating](testing-img/unique-vote-001.png) instead of adding another one.
+2. Visitors can still create multiple accounts, however. Ideally a vote limit is set based on IP address, I've looked into this, but it was a bit too advanced to implement right now. This would also bring up other issues such as multiple people in one household being limited to a single vote, and people can cheat using a VPN.
 
 **_[Back to top](#contents)_**
 
