@@ -44,34 +44,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// album 001 range input slider functionality
-/* credits #5 (see README.md credits section) */
-RANGE_INPUT_ALBUM_001.oninput = function () {
-    rangeOutputAlbum001.innerHTML = this.value;
-    /* credits #6 (see README.md credits section) */
-    album001SubmitBtn.removeAttribute('disabled');
-};
+window.onload = function () {
+    // album 001 range input slider functionality
+    /* credits #5 (see README.md credits section) */
+    if (RANGE_INPUT_ALBUM_001 != null) {
+        RANGE_INPUT_ALBUM_001.oninput = function () {
+            rangeOutputAlbum001.innerHTML = this.value;
+            /* credits #6 (see README.md credits section) */
+            album001SubmitBtn.removeAttribute('disabled');
+        };
+    }
 
-// album 002 range input slider functionality
-/* credits #5 (see README.md credits section) */
-RANGE_INPUT_ALBUM_002.oninput = function () {
-    rangeOutputAlbum002.innerHTML = this.value;
-    /* credits #6 (see README.md credits section) */
-    album002SubmitBtn.removeAttribute('disabled');
-};
+    // album 002 range input slider functionality
+    /* credits #5 (see README.md credits section) */
+    if (RANGE_INPUT_ALBUM_002 != null) {
+        RANGE_INPUT_ALBUM_002.oninput = function () {
+            rangeOutputAlbum002.innerHTML = this.value;
+            /* credits #6 (see README.md credits section) */
+            album002SubmitBtn.removeAttribute('disabled');
+        };
+    }
 
-// album 003 range input slider functionality
-/* credits #5 (see README.md credits section) */
-RANGE_INPUT_ALBUM_003.oninput = function () {
-    rangeOutputAlbum003.innerHTML = this.value;
-    /* credits #6 (see README.md credits section) */
-    album003SubmitBtn.removeAttribute('disabled');
-};
+    // album 003 range input slider functionality
+    /* credits #5 (see README.md credits section) */
+    if (RANGE_INPUT_ALBUM_003 != null) {
+        RANGE_INPUT_ALBUM_003.oninput = function () {
+            rangeOutputAlbum003.innerHTML = this.value;
+            /* credits #6 (see README.md credits section) */
+            album003SubmitBtn.removeAttribute('disabled');
+        };
+    }
 
-// album 004 range input slider functionality
-/* credits #5 (see README.md credits section) */
-RANGE_INPUT_ALBUM_004.oninput = function () {
-    rangeOutputAlbum004.innerHTML = this.value;
-    /* credits #6 (see README.md credits section) */
-    album004SubmitBtn.removeAttribute('disabled');
+    // album 004 range input slider functionality
+    /* credits #5 (see README.md credits section) */
+    if (RANGE_INPUT_ALBUM_004 != null) {
+        RANGE_INPUT_ALBUM_004.oninput = function () {
+            rangeOutputAlbum004.innerHTML = this.value;
+            /* credits #6 (see README.md credits section) */
+            album004SubmitBtn.removeAttribute('disabled');
+        };
+    }
 };
