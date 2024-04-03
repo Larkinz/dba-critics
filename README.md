@@ -1,6 +1,6 @@
 # DBA critics
 
-View live version of the website [here](http://dba-critics.herokuapp.com/).
+View live version of the website [here](https://dba-critics-v2-13ca1d86bf64.herokuapp.com/).
 
 Milestone Project 3: Python and Data Centric Development – [Code Institute](https://codeinstitute.net/)
 
